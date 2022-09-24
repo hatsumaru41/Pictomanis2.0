@@ -19,6 +19,11 @@ import { FormsModule } from '@angular/forms';
 import { CategoriasComponent } from './page/categorias/categorias.component';
 import { MembershipComponent } from './page/membership/membership.component';
 import { RolComponent } from './page/rol/rol.component';
+import { UsuarioComponent } from './page/usuario/usuario.component';
+import { UsuarioListarComponent } from './page/usuario/usuario-listar/usuario-listar.component';
+import { RolListarComponent } from './page/rol/rol-listar/rol-listar.component';
+import { MembershipListarComponent } from './page/membership/membership-listar/membership-listar.component';
+import { CategoriasListarComponent } from './page/categorias/categorias-listar/categorias-listar.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +34,12 @@ import { RolComponent } from './page/rol/rol.component';
     IdiomasCreaeditaComponent,
     CategoriasComponent,
     MembershipComponent,
-    RolComponent
+    RolComponent,
+    UsuarioComponent,
+    UsuarioListarComponent,
+    RolListarComponent,
+    MembershipListarComponent,
+    CategoriasListarComponent
   ],
   imports: [
     BrowserModule,
