@@ -1,4 +1,4 @@
-import { Resenas } from "./reseñas";
+import { Resenas } from "./resenas";
 
 export class Idiomas{
     id:number=0;
