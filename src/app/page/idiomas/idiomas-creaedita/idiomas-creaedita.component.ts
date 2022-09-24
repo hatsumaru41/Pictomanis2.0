@@ -22,7 +22,7 @@ export class IdiomasCreaeditaComponent implements OnInit {
           this.idiomasService.setLista(data);
         })
       })
-      this.router.navigate(['idiomas']);
+      this.router.navigate(['Idioma']);
     }
   }
 

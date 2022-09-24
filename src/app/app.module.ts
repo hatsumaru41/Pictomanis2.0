@@ -24,6 +24,13 @@ import { UsuarioListarComponent } from './page/usuario/usuario-listar/usuario-li
 import { RolListarComponent } from './page/rol/rol-listar/rol-listar.component';
 import { MembershipListarComponent } from './page/membership/membership-listar/membership-listar.component';
 import { CategoriasListarComponent } from './page/categorias/categorias-listar/categorias-listar.component';
+import { CategoriasCreaeditaComponent } from './page/categorias/categorias-creaedita/categorias-creaedita.component';
+import { MembershipCreaeditaComponent } from './page/membership/membership-creaedita/membership-creaedita.component';
+import { ResenasCreaeditaComponent } from './page/resenas/resenas-creaedita/resenas-creaedita.component';
+import { RolCreaditaComponent } from './page/rol/rol-creadita/rol-creadita.component';
+import { UsuarioCreaditaComponent } from './page/usuario/usuario-creadita/usuario-creadita.component';
+import { UsuarioCreaeditaComponent } from './page/usuario/usuario-creaedita/usuario-creaedita.component';
+import { RolCreaeditaComponent } from './page/rol/rol-creaedita/rol-creaedita.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,7 +46,14 @@ import { CategoriasListarComponent } from './page/categorias/categorias-listar/c
     UsuarioListarComponent,
     RolListarComponent,
     MembershipListarComponent,
-    CategoriasListarComponent
+    CategoriasListarComponent,
+    CategoriasCreaeditaComponent,
+    MembershipCreaeditaComponent,
+    ResenasCreaeditaComponent,
+    RolCreaditaComponent,
+    UsuarioCreaditaComponent,
+    UsuarioCreaeditaComponent,
+    RolCreaeditaComponent
   ],
   imports: [
     BrowserModule,
