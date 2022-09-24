@@ -27,8 +27,6 @@ import { CategoriasListarComponent } from './page/categorias/categorias-listar/c
 import { CategoriasCreaeditaComponent } from './page/categorias/categorias-creaedita/categorias-creaedita.component';
 import { MembershipCreaeditaComponent } from './page/membership/membership-creaedita/membership-creaedita.component';
 import { ResenasCreaeditaComponent } from './page/resenas/resenas-creaedita/resenas-creaedita.component';
-import { RolCreaditaComponent } from './page/rol/rol-creadita/rol-creadita.component';
-import { UsuarioCreaditaComponent } from './page/usuario/usuario-creadita/usuario-creadita.component';
 import { UsuarioCreaeditaComponent } from './page/usuario/usuario-creaedita/usuario-creaedita.component';
 import { RolCreaeditaComponent } from './page/rol/rol-creaedita/rol-creaedita.component';
 @NgModule({
@@ -50,8 +48,6 @@ import { RolCreaeditaComponent } from './page/rol/rol-creaedita/rol-creaedita.co
     CategoriasCreaeditaComponent,
     MembershipCreaeditaComponent,
     ResenasCreaeditaComponent,
-    RolCreaditaComponent,
-    UsuarioCreaditaComponent,
     UsuarioCreaeditaComponent,
     RolCreaeditaComponent
   ],
