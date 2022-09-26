@@ -63,6 +63,29 @@ module.exports = function () {
                 id:2,
                 Categorias: "Objetos",
             }
+        ],
+        Membership: [
+            {
+                id:1,
+                miembro: "Juan Pablo",
+                type: "Mensual",
+            },
+            {
+                id:2,
+                miembro: "Teresa Hernandez",
+                type: "Anual",
+            },
+            {
+                id:3,
+                miembro: "Lucas Yaranaika",
+                type: "Anual",
+            },
+            {
+                id:4,
+                miembro: "Renato Inapaytan",
+                type: "Mensual",
+            }
+
         ]
     }
     return data

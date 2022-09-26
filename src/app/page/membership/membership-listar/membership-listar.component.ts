@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatTableDataSource } from '@angular/material/table';
+import {Membership} from 'src/app/model/membership';
 
 @Component({
   selector: 'app-membership-listar',
