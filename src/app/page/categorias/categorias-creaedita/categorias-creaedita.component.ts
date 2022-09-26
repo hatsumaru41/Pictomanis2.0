@@ -21,7 +21,7 @@ export class CategoriasCreaeditaComponent implements OnInit {
           this.categoriasService.setLista(data);
         })
       })
-      this.router.navigate(['Idioma']);
+      this.router.navigate(['Categorias']);
     }
   }
 
