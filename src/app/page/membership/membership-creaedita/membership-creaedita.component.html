@@ -1,1 +1,28 @@
-<p>membership-creaedita works!</p>
+<div class="container">
+
+    <h1>Agrege Membresia</h1>
+  
+    <mat-form-field class="example-full-width">
+      <mat-label>Id</mat-label>
+      <input matInput placeholder="Id" [(ngModel)]="membership.id">
+    </mat-form-field>
+  
+    <br>
+  
+    <mat-form-field class="example-full-width">
+      <mat-label>Miembro</mat-label>
+      <input matInput required placeholder="name" [(ngModel)]="membership.miembro">
+  
+    </mat-form-field>
+    <br>
+    <mat-form-field class="example-full-width">
+        <mat-label>Tipo de Membresia</mat-label>
+        <input matInput required placeholder="name" [(ngModel)]="membership.type">
+    
+      </mat-form-field>
+      <br>
+    <br>
+    <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
+    <button mat-raised-button color="warn" routerLink="/idiomas">Cancelar</button>
+  
+  </div>
