@@ -1,1 +1,22 @@
-<p>categorias-creaedita works!</p>
+<div class="container">
+
+    <h1>Agrege el idioma</h1>
+  
+    <mat-form-field class="example-full-width">
+      <mat-label>Id</mat-label>
+      <input matInput placeholder="Id" [(ngModel)]="Categorias.id">
+    </mat-form-field>
+  
+    <br>
+  
+    <mat-form-field class="example-full-width">
+      <mat-label>Idioma</mat-label>
+      <input matInput required placeholder="name" [(ngModel)]="Categorias.categorias">
+  
+    </mat-form-field>
+    <br>
+    <br>
+    <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
+    <button mat-raised-button color="warn" routerLink="/categorias">Cancelar</button>
+  
+  </div>

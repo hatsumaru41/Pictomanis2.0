@@ -53,6 +53,16 @@ module.exports = function () {
                     "id":2
                 }
             }
+        ],
+        Categorias: [
+            {
+                id:1,
+                Categorias: "Indicaciones",
+            },
+            {
+                id:2,
+                Categorias: "Objetos",
+            }
         ]
     }
     return data
