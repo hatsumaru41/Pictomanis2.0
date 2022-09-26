@@ -10,6 +10,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from'@angular/material/icon';
+import { MatDialogModule } from '@angular/material/dialog';
 import { FormsModule } from '@angular/forms';
 
 import { CategoriasComponent } from './page/categorias/categorias.component';
@@ -27,6 +28,7 @@ import { ResenasCreaeditaComponent } from './page/resenas/resenas-creaedita/rese
 import { MembershipComponent } from './page/membership/membership.component';
 import { MembershipListarComponent } from './page/membership/membership-listar/membership-listar.component';
 import { MembershipCreaeditaComponent } from './page/membership/membership-creaedita/membership-creaedita.component';
+import { MembershipDialogoComponent } from './page/membership/membership-listar/membership-dialogo/membership-dialogo.component';
 
 import { RolComponent } from './page/rol/rol.component';
 import { RolListarComponent } from './page/rol/rol-listar/rol-listar.component';
@@ -56,7 +58,8 @@ import { UsuarioListarComponent } from './page/usuario/usuario-listar/usuario-li
     RolListarComponent,
     UsuarioComponent,
     UsuarioListarComponent,
-    UsuarioCreaeditaComponent
+    UsuarioCreaeditaComponent,
+    MembershipDialogoComponent
   ],
   imports: [
     BrowserModule,
@@ -67,7 +70,8 @@ import { UsuarioListarComponent } from './page/usuario/usuario-listar/usuario-li
     MatInputModule,
     MatButtonModule,
     MatIconModule,
-    FormsModule
+    FormsModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

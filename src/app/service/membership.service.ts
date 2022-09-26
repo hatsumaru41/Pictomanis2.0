@@ -9,6 +9,7 @@ import { Membership } from '../model/membership';
 export class MembershipService {
   url:string="http://localhost:5000/Membership"
   private listaCambio = new Subject<Membership[]>()
+  private confirmaEliminacion = new Subject<Boolean>()
     constructor(private http:HttpClient) { }
     listar(){
       return this.http.get<Membership[]>(this.url);
@@ -21,5 +22,20 @@ export class MembershipService {
     }
     getLista() {
       return this.listaCambio.asObservable();
+    }
+    modificar(membership: Membership){
+      return this.http.put(this.url + "/"+membership.id, membership);
+    }
+    listarId(id: number){
+      return this.http.get<Membership>(`${this.url}/${id}`);
+    }
+    eliminar(id: number) {
+      return this.http.delete(this.url + "/" + id);
+    }
+    getConfirmaEliminacion() {
+      return this.confirmaEliminacion.asObservable();
+    }
+    setConfirmaEliminacion(estado: Boolean) {
+      this.confirmaEliminacion.next(estado);
     }
 }
