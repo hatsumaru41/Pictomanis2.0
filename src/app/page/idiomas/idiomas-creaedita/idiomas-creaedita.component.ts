@@ -13,7 +13,6 @@ export class IdiomasCreaeditaComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
   aceptar(): void {
     if (this.idiomas.idiomas.length > 0) {
 
