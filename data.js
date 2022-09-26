@@ -86,6 +86,16 @@ module.exports = function () {
                 type: "Mensual",
             }
 
+        ],
+        Rol:[
+            {
+                id:1,
+                rolName: "Profesor",
+            },
+            {
+                id:2,
+                rolName: "Usuario",
+            }
         ]
     }
     return data
