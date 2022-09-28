@@ -1,1 +1,54 @@
-<p>usuario-creaedita works!</p>
+<p>propietario-creaedita works!</p>
+<div class="container">
+
+  <h1>Capacitacion</h1>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>id</mat-label>
+    <input matInput placeholder="id" [(ngModel)]="Usuario.id">
+  </mat-form-field>
+
+  <br>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>name</mat-label>
+    <input matInput required placeholder="name" [(ngModel)]="Usuario.name">
+
+  </mat-form-field>
+  <br>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>lastname</mat-label>
+    <input matInput required placeholder="lastname" [(ngModel)]="Usuario.lastname">
+
+  </mat-form-field>
+  <br>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>number</mat-label>
+    <input matInput required placeholder="number" [(ngModel)]="Usuario.number">
+
+  </mat-form-field>
+  <br>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>email</mat-label>
+    <input matInput required placeholder="email" [(ngModel)]="Usuario.email">
+
+  </mat-form-field>
+  <br>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>password</mat-label>
+    <input matInput required placeholder="password" [(ngModel)]="Usuario.password">
+
+  </mat-form-field>
+
+  <br>
+
+  <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
+  <button mat-raised-button color="warn" routerLink="/usuario">Cancelar</button>
+  <p>{{mensaje}}</p>
+
+</div>
+
