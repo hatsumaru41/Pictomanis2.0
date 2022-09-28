@@ -37,6 +37,7 @@ import { RolCreaeditaComponent } from './page/rol/rol-creaedita/rol-creaedita.co
 import { UsuarioCreaeditaComponent } from './page/usuario/usuario-creaedita/usuario-creaedita.component';
 import { UsuarioComponent } from './page/usuario/usuario.component';
 import { UsuarioListarComponent } from './page/usuario/usuario-listar/usuario-listar.component';
+import { UsuarioDialogoComponent } from './page/usuario/usuario-listar/usuario-dialogo/usuario-dialogo.component';
 
 @NgModule({
   declarations: [
@@ -59,7 +60,8 @@ import { UsuarioListarComponent } from './page/usuario/usuario-listar/usuario-li
     UsuarioComponent,
     UsuarioListarComponent,
     UsuarioCreaeditaComponent,
-    MembershipDialogoComponent
+    MembershipDialogoComponent,
+    UsuarioDialogoComponent
   ],
   imports: [
     BrowserModule,
