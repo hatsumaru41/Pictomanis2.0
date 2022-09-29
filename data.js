@@ -130,6 +130,14 @@ module.exports = function () {
             email: "JesusSolor@gmail.com",
             password: "chocolate",
           },
+          {
+            id:5,
+            name: "Paul",
+            lastname: "Weselhof",
+            number: 54523832,
+            email: "Weselhof@gmail.com",
+            password: "valdomero",
+          },
 
         ],
     }
