@@ -18,7 +18,7 @@ const routes: Routes = [
   {
   path: 'resenas', component:ResenasComponent,children:[
     {path: 'nuevo', component: ResenasCreaeditaComponent}
-    
+
 ]
 },
 {
@@ -43,9 +43,11 @@ const routes: Routes = [
 },
 {
   path: 'usuario', component: UsuarioComponent,children:[
-    {path: 'nuevo', component: UsuarioCreaeditaComponent}
+    { path: 'insertar', component: UsuarioCreaeditaComponent},
+    { path: 'edicion/:id', component: UsuarioCreaeditaComponent }
   ]
-}
+},
+
 
 ];
 
