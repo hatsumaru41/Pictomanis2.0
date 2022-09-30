@@ -25,7 +25,8 @@ const routes: Routes = [
 },
 {
   path: 'idiomas', component:IdiomasComponent,children:[
-    {path: 'nuevo', component: IdiomasCreaeditaComponent }
+    {path: 'nuevo', component: IdiomasCreaeditaComponent },
+    { path: 'edicion/:id', component: IdiomasCreaeditaComponent }
   ]
 },
 {

@@ -38,6 +38,8 @@ import { UsuarioCreaeditaComponent } from './page/usuario/usuario-creaedita/usua
 import { UsuarioComponent } from './page/usuario/usuario.component';
 import { UsuarioListarComponent } from './page/usuario/usuario-listar/usuario-listar.component';
 import { UsuarioDialogoComponent } from './page/usuario/usuario-listar/usuario-dialogo/usuario-dialogo.component';
+import { IdiomasBuscarComponent } from './page/idiomas/idiomas-buscar/idiomas-buscar.component';
+import { IdiomasDialogoComponent } from './page/idiomas/idiomas-listar/idiomas-dialogo/idiomas-dialogo.component';
 
 import { PictogramasComponent } from './page/pictogramas/pictogramas.component';
 import { PictogramasCreaeditaComponent } from './page/pictogramas/pictogramas-creaedita/pictogramas-creaedita.component';
@@ -69,6 +71,7 @@ import { UsuarioBuscarComponent } from './page/usuario/usuario-buscar/usuario-bu
     UsuarioCreaeditaComponent,
     MembershipDialogoComponent,
     UsuarioDialogoComponent,
+<<<<<<< Updated upstream
     PictogramasComponent,
     PictogramasCreaeditaComponent,
     PictogramasListarComponent,
@@ -76,6 +79,10 @@ import { UsuarioBuscarComponent } from './page/usuario/usuario-buscar/usuario-bu
     PictogramaDialogoComponent,
     UsuarioBuscarComponent
 
+=======
+    IdiomasBuscarComponent,
+    IdiomasDialogoComponent
+>>>>>>> Stashed changes
   ],
   imports: [
     BrowserModule,

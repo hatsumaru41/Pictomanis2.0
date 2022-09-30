@@ -9,6 +9,7 @@ import { Idiomas } from '../model/idiomas';
 export class IdiomasService {
  url:string="http://localhost:5000/Idiomas"
 private listaCambio = new Subject<Idiomas[]>()
+private confirmaEliminacion = new Subject<Boolean>()
   constructor(private http:HttpClient) { }
   listar(){
     return this.http.get<Idiomas[]>(this.url);
@@ -21,5 +22,21 @@ private listaCambio = new Subject<Idiomas[]>()
   }
   getLista() {
     return this.listaCambio.asObservable();
+  }
+  modificar(types: Idiomas) {
+  return this.http.put(this.url + '/' + types.id, types);
+}
+
+  listarId(id: number) {
+    return this.http.get<Idiomas>(`${this.url}/${id}`);
+  }
+  eliminar(id: number) {
+    return this.http.delete(this.url + "/" + id);
+  }
+  getConfirmaEliminacion() {
+    return this.confirmaEliminacion.asObservable();
+  }
+  setConfirmaEliminacion(estado: Boolean) {
+    this.confirmaEliminacion.next(estado);
   }
 }
