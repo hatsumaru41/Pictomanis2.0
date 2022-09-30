@@ -1,4 +1,5 @@
 import { RouterTestingModule } from '@angular/router/testing';
+import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -96,7 +97,16 @@ import { CategoriasDialogoComponent } from './page/categorias/categorias-listar/
     MatIconModule,
     FormsModule,
     RouterTestingModule,
-    MatDialogModule
+    MatDialogModule,
+    RouterModule.forRoot([
+      {path: 'categorias-listar', component: CategoriasListarComponent},
+      {path: 'idiomas-listar', component: IdiomasListarComponent},
+      {path: 'membership-listar', component: MembershipListarComponent},
+      {path: 'pictogramas-listar', component: PictogramasListarComponent},
+      {path: 'resenas-listar', component: ResenasListarComponent},
+      {path: 'rol-listar', component: RolListarComponent},
+      {path: 'usuario-listar', component: UsuarioDialogoComponent}
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]
