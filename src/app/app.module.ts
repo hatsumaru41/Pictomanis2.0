@@ -46,6 +46,7 @@ import { PictogramasBuscarComponent } from './page/pictogramas/pictogramas-busca
 import { PictogramaDialogoComponent } from './page/pictogramas/pictograma-dialogo/pictograma-dialogo.component';
 import { UsuarioBuscarComponent } from './page/usuario/usuario-buscar/usuario-buscar.component';
 import { rolBuscarComponent } from './page/rol/rol-buscar/rol-buscar.component';
+import { IdiomasBuscarComponent } from './page/idiomas/idiomas-buscar/idiomas-buscar.component';
 
 @NgModule({
   declarations: [
@@ -56,6 +57,7 @@ import { rolBuscarComponent } from './page/rol/rol-buscar/rol-buscar.component';
     IdiomasComponent,
     IdiomasListarComponent,
     IdiomasCreaeditaComponent,
+    IdiomasBuscarComponent,
     ResenasComponent,
     ResenasListarComponent,
     ResenasCreaeditaComponent,
