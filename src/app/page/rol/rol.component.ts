@@ -8,7 +8,8 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class RolComponent implements OnInit {
 
-  constructor(public route:ActivatedRoute) { }
+
+  constructor(public route: ActivatedRoute) { }
 
   ngOnInit(): void {
   }
