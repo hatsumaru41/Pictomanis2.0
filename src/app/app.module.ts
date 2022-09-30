@@ -38,15 +38,13 @@ import { UsuarioCreaeditaComponent } from './page/usuario/usuario-creaedita/usua
 import { UsuarioComponent } from './page/usuario/usuario.component';
 import { UsuarioListarComponent } from './page/usuario/usuario-listar/usuario-listar.component';
 import { UsuarioDialogoComponent } from './page/usuario/usuario-listar/usuario-dialogo/usuario-dialogo.component';
-<<<<<<< Updated upstream
+
 import { PictogramasComponent } from './page/pictogramas/pictogramas.component';
 import { PictogramasCreaeditaComponent } from './page/pictogramas/pictogramas-creaedita/pictogramas-creaedita.component';
 import { PictogramasListarComponent } from './page/pictogramas/pictogramas-listar/pictogramas-listar.component';
 import { PictogramasBuscarComponent } from './page/pictogramas/pictogramas-buscar/pictogramas-buscar.component';
 import { PictogramaDialogoComponent } from './page/pictogramas/pictograma-dialogo/pictograma-dialogo.component';
-=======
 import { UsuarioBuscarComponent } from './page/usuario/usuario-buscar/usuario-buscar.component';
->>>>>>> Stashed changes
 
 @NgModule({
   declarations: [
@@ -71,15 +69,13 @@ import { UsuarioBuscarComponent } from './page/usuario/usuario-buscar/usuario-bu
     UsuarioCreaeditaComponent,
     MembershipDialogoComponent,
     UsuarioDialogoComponent,
-<<<<<<< Updated upstream
     PictogramasComponent,
     PictogramasCreaeditaComponent,
     PictogramasListarComponent,
     PictogramasBuscarComponent,
-    PictogramaDialogoComponent
-=======
+    PictogramaDialogoComponent,
     UsuarioBuscarComponent
->>>>>>> Stashed changes
+
   ],
   imports: [
     BrowserModule,

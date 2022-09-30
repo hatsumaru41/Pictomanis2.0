@@ -24,5 +24,4 @@ export class UsuarioBuscarComponent implements OnInit {
       this.UsuarioService.setLista(array);
     })
   }
-
 }
