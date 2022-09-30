@@ -19,7 +19,8 @@ import { PictogramasComponent } from './page/pictogramas/pictogramas.component';
 const routes: Routes = [
   {
     path: 'resenas', component: ResenasComponent, children: [
-      { path: 'nuevo', component: ResenasCreaeditaComponent }
+      { path: 'nuevo', component: ResenasCreaeditaComponent },
+      { path: 'edicion/:id', component: ResenasCreaeditaComponent}
 
     ]
   },
@@ -31,12 +32,14 @@ const routes: Routes = [
   },
   {
     path: 'categorias', component: CategoriasComponent, children: [
-      { path: 'nuevo', component: CategoriasCreaeditaComponent }
+      { path: 'nuevo', component: CategoriasCreaeditaComponent },
+      { path: 'edicion/:id', component: CategoriasCreaeditaComponent}
     ]
   },
   {
     path: 'membership', component: MembershipComponent, children: [
       { path: 'nuevo', component: MembershipCreaeditaComponent },
+      { path: 'edicion/:id', component: MembershipCreaeditaComponent}
     ]
   },
   {

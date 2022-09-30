@@ -48,15 +48,11 @@ export class PictogramasCreaeditaComponent implements OnInit {
             this.mensaje = "COMPLETE LOS ESPACIOS REQUERIDOS"
 
     }
-
-
   }
 
   init(){
     if (this.edicion) {
       this.PictogramaService.listarId(this.id).subscribe(data => {this.Pictograma = data ;})
-          
-
     }
   }
 }

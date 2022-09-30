@@ -1,7 +1,5 @@
 <div class="container"> 
     <div style="text-align:center ;">
-      
-    
     <h1>LISTAR PICTOGRAMAS</h1>
     </div>
     <app-pictogramas-buscar></app-pictogramas-buscar>
@@ -42,16 +40,14 @@
     
         </td>
       </ng-container>
-    
-    
-    
+
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
       <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
     </table>
     
     <div class="example-full-container">
       <button mat-mini-fab color="primary" aria-label="Example icon button with a plus one icon"
-          routerLink="/pictograma/nuevo">
+          routerLink="/pictograma/insertar">
           <mat-icon>plus_one</mat-icon>
         </button>
       </div>

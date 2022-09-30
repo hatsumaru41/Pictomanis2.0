@@ -4,6 +4,7 @@ import { UsuarioService } from 'src/app/service/usuario.service';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatDialog } from '@angular/material/dialog';
 import { UsuarioDialogoComponent } from './usuario-dialogo/usuario-dialogo.component';
+
 @Component({
   selector: 'app-usuario-listar',
   templateUrl: './usuario-listar.component.html',
@@ -14,7 +15,6 @@ export class UsuarioListarComponent implements OnInit {
   displayedColumns: string[] =['id', 'name', 'lastname', 'number', 'email', 'password', 'accion1','accion2'];
   private idMayor: number = 0;
   constructor(private us: UsuarioService, private dialog: MatDialog) {}
-
 
   ngOnInit(): void {
     this.us.listar().subscribe(data => {

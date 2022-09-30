@@ -12,5 +12,4 @@ export class CategoriasComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }
