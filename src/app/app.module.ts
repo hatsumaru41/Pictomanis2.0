@@ -47,6 +47,8 @@ import { PictogramaDialogoComponent } from './page/pictogramas/pictograma-dialog
 import { UsuarioBuscarComponent } from './page/usuario/usuario-buscar/usuario-buscar.component';
 import { rolBuscarComponent } from './page/rol/rol-buscar/rol-buscar.component';
 import { IdiomasBuscarComponent } from './page/idiomas/idiomas-buscar/idiomas-buscar.component';
+import { CategoriasBuscarComponent } from './page/categorias/categorias-buscar/categorias-buscar.component';
+import { CategoriasDialogoComponent } from './page/categorias/categorias-listar/categorias-dialogo/categorias-dialogo.component';
 
 @NgModule({
   declarations: [
@@ -78,7 +80,9 @@ import { IdiomasBuscarComponent } from './page/idiomas/idiomas-buscar/idiomas-bu
     PictogramasBuscarComponent,
     PictogramaDialogoComponent,
     UsuarioBuscarComponent,
-    rolBuscarComponent
+    rolBuscarComponent,
+    CategoriasBuscarComponent,
+    CategoriasDialogoComponent
 
   ],
   imports: [
