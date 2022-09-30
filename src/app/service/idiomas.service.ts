@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs';
+import { Subject, EMPTY } from 'rxjs';
 import { Idiomas } from '../model/idiomas';
 
 @Injectable({
@@ -38,5 +38,12 @@ private confirmaEliminacion = new Subject<Boolean>()
   }
   setConfirmaEliminacion(estado: Boolean) {
     this.confirmaEliminacion.next(estado);
+  }
+  buscar(texto: string) {
+    if (texto.length != 0) {
+      return this.http.post<Idiomas[]>(`${this.url}/buscar`, texto.toLowerCase(), {
+      });
+    }
+    return EMPTY;
   }
 }

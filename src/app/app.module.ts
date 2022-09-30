@@ -71,18 +71,14 @@ import { UsuarioBuscarComponent } from './page/usuario/usuario-buscar/usuario-bu
     UsuarioCreaeditaComponent,
     MembershipDialogoComponent,
     UsuarioDialogoComponent,
-<<<<<<< Updated upstream
     PictogramasComponent,
     PictogramasCreaeditaComponent,
     PictogramasListarComponent,
     PictogramasBuscarComponent,
     PictogramaDialogoComponent,
-    UsuarioBuscarComponent
-
-=======
+    UsuarioBuscarComponent,
     IdiomasBuscarComponent,
     IdiomasDialogoComponent
->>>>>>> Stashed changes
   ],
   imports: [
     BrowserModule,
