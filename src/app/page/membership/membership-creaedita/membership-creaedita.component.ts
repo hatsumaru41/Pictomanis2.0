@@ -1,7 +1,7 @@
+import { Membership } from './../../../model/membership';
 import { Component, OnInit } from '@angular/core';
 import { MembershipService } from 'src/app/service/membership.service';
-import { Router } from '@angular/router';
-import { Membership } from 'src/app/model/membership';
+import { Router, ActivatedRoute, Params } from '@angular/router';
 
 @Component({
   selector: 'app-membership-creaedita',
@@ -11,9 +11,16 @@ import { Membership } from 'src/app/model/membership';
 export class MembershipCreaeditaComponent implements OnInit {
   membership: Membership = new Membership();
   mensaje: string = "";
-  constructor(private membershipService: MembershipService, private router: Router) { }
+  edicion: boolean = false;
+  id: number = 0;
+  constructor(private membershipService: MembershipService, private router: Router,private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.route.params.subscribe((data: Params) => {
+      this.id = data['id'];
+      this.edicion = data['id'] != null;
+      this.init();
+    });
   }
   aceptar(): void {
     if (this.membership.miembro.length > 0) {
@@ -28,6 +35,14 @@ export class MembershipCreaeditaComponent implements OnInit {
     else{
       this.mensaje = "Complete los datos requeridos"
     }
+  }
+  init() {
+    if (this.edicion) {
+      this.membershipService.listarId(this.id).subscribe(data => {
+        this.membership = data;
+      })
+    }
+
   }
 
 }

@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs';
+import { Subject, EMPTY } from 'rxjs';
 import { Membership } from '../model/membership';
 
 @Injectable({
@@ -37,5 +37,12 @@ export class MembershipService {
     }
     setConfirmaEliminacion(estado: Boolean) {
       this.confirmaEliminacion.next(estado);
+    }
+    buscar(texto: string){
+      if(texto.length !=0){
+        return this.http.post<Membership[]>(`${this.url}/buscar`, texto.toLowerCase(), {
+        });
+      }
+      return EMPTY;
     }
 }
