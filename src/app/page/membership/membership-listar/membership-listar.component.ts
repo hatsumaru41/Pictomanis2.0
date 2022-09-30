@@ -20,6 +20,12 @@ export class MembershipListarComponent implements OnInit {
     this.Vs.listar().subscribe(d =>{
       this.dataSource = new MatTableDataSource(d);
     })
+    this.Vs.getLista().subscribe(data => {
+      this.dataSource = new MatTableDataSource(data);
+    });
+    this.Vs.getConfirmaEliminacion().subscribe(data => {
+      data == true ? this.eliminar(this.idMayor) : false;
+    });
     
   }
   confirmar(id: number){
