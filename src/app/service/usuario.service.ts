@@ -14,10 +14,18 @@ export class UsuarioService {
   listar() {
     return this.http.get<usuario[]>(this.url);
   }
-  insertar(Usuario: usuario) {     return this.http.post(this.url, Usuario);   }
-  setLista(listaNueva: usuario[]) {     this.listaCambio.next(listaNueva);   }
-  getLista() {     return this.listaCambio.asObservable();   }
-  modificar(Usuario: usuario){return this.http.put(this.url + "/" + Usuario.id, Usuario);}
+  insertar(Usuario: usuario) { 
+      return this.http.post(this.url, Usuario);   
+    }
+  setLista(listaNueva: usuario[]) {
+    this.listaCambio.next(listaNueva);
+  }
+  getLista() {
+    return this.listaCambio.asObservable();
+  }
+  modificar(Usuario: usuario){
+    return this.http.put(this.url + "/" + Usuario.id, Usuario);
+  }
   listarId(id: number) {
     return this.http.get<usuario>(`${this.url}/${id}`);
   }

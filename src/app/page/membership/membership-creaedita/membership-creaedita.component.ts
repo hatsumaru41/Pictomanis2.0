@@ -10,6 +10,7 @@ import { Membership } from 'src/app/model/membership';
 })
 export class MembershipCreaeditaComponent implements OnInit {
   membership: Membership = new Membership();
+  mensaje: string = "";
   constructor(private membershipService: MembershipService, private router: Router) { }
 
   ngOnInit(): void {
@@ -23,6 +24,9 @@ export class MembershipCreaeditaComponent implements OnInit {
         })
       })
       this.router.navigate(['Membership']);
+    }
+    else{
+      this.mensaje = "Complete los datos requeridos"
     }
   }
 
