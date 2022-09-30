@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
 import { usuario } from '../model/usuario';
-import { Subject } from 'rxjs';
+import { Subject, EMPTY } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
@@ -14,8 +14,8 @@ export class UsuarioService {
   listar() {
     return this.http.get<usuario[]>(this.url);
   }
-  insertar(Usuario: usuario) { 
-      return this.http.post(this.url, Usuario);   
+  insertar(Usuario: usuario) {
+      return this.http.post(this.url, Usuario);
     }
   setLista(listaNueva: usuario[]) {
     this.listaCambio.next(listaNueva);
@@ -37,5 +37,12 @@ export class UsuarioService {
   }
   setConfirmaEliminacion(estado: Boolean) {
     this.confirmaEliminacion.next(estado);
+  }
+  buscar(texto: string) {
+    if (texto.length != 0) {
+      return this.http.post<usuario[]>(`${this.url}/buscar`, texto.toLowerCase(), {
+      });
+    }
+    return EMPTY;
   }
 }

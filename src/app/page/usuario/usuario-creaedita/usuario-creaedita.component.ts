@@ -40,7 +40,7 @@ export class UsuarioCreaeditaComponent implements OnInit {
           })
         })
       }
-      this.router.navigate(['propietarios']);
+      this.router.navigate(['usuario']);
     } else {
       this.mensaje = "Complete los valores requeridos";
     }
