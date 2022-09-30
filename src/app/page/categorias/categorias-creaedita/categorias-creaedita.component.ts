@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CategoriasService } from 'src/app/service/categorias.service';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute, Params } from '@angular/router';
 import { Categorias } from 'src/app/model/categorias';
 @Component({
   selector: 'app-categorias-creaedita',
@@ -9,6 +9,9 @@ import { Categorias } from 'src/app/model/categorias';
 })
 export class CategoriasCreaeditaComponent implements OnInit {
   Categorias: Categorias = new Categorias();
+  mensaje: string = " ";
+  edicion: boolean = false;
+  id: number = 0;
   constructor(private categoriasService: CategoriasService, private router: Router) { }
 
   ngOnInit(): void {
@@ -22,6 +25,16 @@ export class CategoriasCreaeditaComponent implements OnInit {
         })
       })
       this.router.navigate(['Categorias']);
+    }
+    else{
+      this.mensaje = "Complete los valores requeridos"
+    }
+  }
+  init(){
+    if(this.edicion){
+      this.categoriasService.listarId(this.id).subscribe(data=>{
+        this.Categorias = data;
+      })
     }
   }
 

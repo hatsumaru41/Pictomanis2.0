@@ -1,14 +1,15 @@
+import { Categorias } from './../model/categorias';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Categorias } from '../model/categorias';
-import { Subject } from 'rxjs';
+import { Subject, EMPTY } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CategoriasService {
-  url:string="http://localhost:5000/categorias"
-private listaCambio = new Subject<Categorias[]>()
+  url:string="http://localhost:5000/Categorias"
+  private listaCambio = new Subject<Categorias[]>()
+  private confirmaEliminacion = new Subject<Boolean>()
   constructor(private http:HttpClient) { }
   listar(){
     return this.http.get<Categorias[]>(this.url);
@@ -21,5 +22,27 @@ private listaCambio = new Subject<Categorias[]>()
   }
   getLista() {
     return this.listaCambio.asObservable();
+  }
+  modificar(Categorias: Categorias){
+    return this.http.put(this.url + "/" + Categorias.id, Categorias);
+  }
+  listarId(id: number){
+    return this.http.get<Categorias>(`${this.url}/${id}`);
+  }
+  eliminar(id: number) {
+    return this.http.delete(this.url + "/" + id);
+  }
+  getConfirmaEliminacion() {
+    return this.confirmaEliminacion.asObservable();
+  }
+  setConfirmaEliminacion(estado: Boolean) {
+    this.confirmaEliminacion.next(estado);
+  }
+  buscar(texto: string) {
+    if (texto.length != 0) {
+      return this.http.post<Categorias[]>(`${this.url}/buscar`, texto.toLowerCase(), {
+      });
+    }
+    return EMPTY;
   }
 }
