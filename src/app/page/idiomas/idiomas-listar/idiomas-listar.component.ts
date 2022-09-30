@@ -12,7 +12,7 @@ import { IdiomasDialogoComponent } from './idiomas-dialogo/idiomas-dialogo.compo
 })
 export class IdiomasListarComponent implements OnInit {
   dataSource: MatTableDataSource<Idiomas> = new MatTableDataSource();
-  displayedColumns:string[]= ['id','idiomas','accion1','accion2']
+  displayedColumns:string[]= ['id','idiomas','resenas','accion1','accion2']
   private idMayor: number = 0;
   constructor(private Vs:IdiomasService,private dialog:MatDialog) { }
 

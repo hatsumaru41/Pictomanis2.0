@@ -1,7 +1,7 @@
 
 module.exports = function () {
     var data = {
-        Resenas: [
+        resenas: [
             {
                 id: 1,
                 nameResenas: "lucas ",
@@ -24,7 +24,7 @@ module.exports = function () {
                 descripcionResenas: " Good job"
             }
         ],
-        Idiomas: [
+        idiomas: [
             {
                 id: 1,
                 idiomas: "Japones ",
@@ -54,7 +54,7 @@ module.exports = function () {
                 }
             }
         ],
-        Categorias: [
+        categorias: [
             {
                 id:1,
                 Categorias: "Indicaciones",
@@ -64,7 +64,7 @@ module.exports = function () {
                 Categorias: "Objetos",
             }
         ],
-        Membership: [
+        membership: [
             {
                 id:1,
                 miembro: "Juan Pablo",
@@ -87,7 +87,7 @@ module.exports = function () {
             }
 
         ],
-        Rol:[
+        rol:[
             {
                 id:1,
                 rolName: "Profesor",
@@ -101,7 +101,7 @@ module.exports = function () {
               rolName: "Padre",
           }
         ],
-        usuarios: [
+        usuario: [
           {
             id:1,
             name: "Luisa",

@@ -7,7 +7,7 @@ import { Membership } from '../model/membership';
   providedIn: 'root'
 })
 export class MembershipService {
-  url:string="http://localhost:5000/Membership"
+  url:string="http://localhost:5000/membership"
   private listaCambio = new Subject<Membership[]>()
   private confirmaEliminacion = new Subject<Boolean>()
     constructor(private http:HttpClient) { }

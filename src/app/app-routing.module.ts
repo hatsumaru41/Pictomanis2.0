@@ -9,7 +9,7 @@ import { CategoriasComponent } from './page/categorias/categorias.component';
 import { CategoriasCreaeditaComponent } from './page/categorias/categorias-creaedita/categorias-creaedita.component';
 import { MembershipComponent } from './page/membership/membership.component';
 import { MembershipCreaeditaComponent } from './page/membership/membership-creaedita/membership-creaedita.component';
-import { RolComponent} from './page/rol/rol.component';
+import { RolComponent } from './page/rol/rol.component';
 import { RolCreaeditaComponent } from './page/rol/rol-creaedita/rol-creaedita.component';
 import { UsuarioComponent } from './page/usuario/usuario.component';
 import { UsuarioCreaeditaComponent } from './page/usuario/usuario-creaedita/usuario-creaedita.component';
@@ -18,46 +18,46 @@ import { PictogramasComponent } from './page/pictogramas/pictogramas.component';
 
 const routes: Routes = [
   {
-  path: 'resenas', component:ResenasComponent,children:[
-    {path: 'nuevo', component: ResenasCreaeditaComponent}
+    path: 'resenas', component: ResenasComponent, children: [
+      { path: 'nuevo', component: ResenasCreaeditaComponent }
 
-]
-},
-{
-  path: 'idiomas', component:IdiomasComponent,children:[
-    {path: 'nuevo', component: IdiomasCreaeditaComponent },
-    { path: 'edicion/:id', component: IdiomasCreaeditaComponent }
-  ]
-},
-{
-  path: 'categorias', component:CategoriasComponent,children:[
-    {path: 'nuevo', component: CategoriasCreaeditaComponent}
-  ]
-},
-{
-  path: 'membership', component:MembershipComponent,children:[
-    {path: 'nuevo', component: MembershipCreaeditaComponent},
-  ]
-},
-{
-  path: 'rol', component:RolComponent,children:[
-    {path: 'insertar', component: RolCreaeditaComponent},
-    { path: 'edicion/:id', component: RolCreaeditaComponent }
-  ]
-},
-{
-  path: 'usuario', component: UsuarioComponent,children:[
-    { path: 'insertar', component: UsuarioCreaeditaComponent},
-    { path: 'edicion/:id', component: UsuarioCreaeditaComponent }
-  ]
-},
-{
-  path: 'pictogramas',component:PictogramasComponent,children:[
-   {path:'nuevo', component:PictogramasComponent},
-   {path:'edicion/id',component:PictogramasCreaeditaComponent}
-  ]
+    ]
+  },
+  {
+    path: 'idiomas', component: IdiomasComponent, children: [
+      { path: 'nuevo', component: IdiomasCreaeditaComponent },
+      { path: 'edicion/:id', component: IdiomasCreaeditaComponent }
+    ]
+  },
+  {
+    path: 'categorias', component: CategoriasComponent, children: [
+      { path: 'nuevo', component: CategoriasCreaeditaComponent }
+    ]
+  },
+  {
+    path: 'membership', component: MembershipComponent, children: [
+      { path: 'nuevo', component: MembershipCreaeditaComponent },
+    ]
+  },
+  {
+    path: 'rol', component: RolComponent, children: [
+      { path: 'insertar', component: RolCreaeditaComponent },
+      { path: 'edicion/:id', component: RolCreaeditaComponent }
+    ]
+  },
+  {
+    path: 'usuario', component: UsuarioComponent, children: [
+      { path: 'insertar', component: UsuarioCreaeditaComponent },
+      { path: 'edicion/:id', component: UsuarioCreaeditaComponent }
+    ]
+  },
+  {
+    path: 'pictogramas', component: PictogramasComponent, children: [
+      { path: 'nuevo', component: PictogramasComponent },
+      { path: 'edicion/id', component: PictogramasCreaeditaComponent }
+    ]
 
- },
+  },
 
 ];
 
