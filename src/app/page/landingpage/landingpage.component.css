@@ -1,0 +1,94 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  .contenedor{
+    width: 100%;
+    padding: 15px;
+  }
+  
+  .formulario{
+  margin-top: 150px;
+  padding: 3px;
+  }
+  body{
+    background-color: #444;
+    font-family: 'calibri';
+    background: url('fondo3.jpg') no-repeat 50% 50%;
+    background-size: cover;
+    margin: 0;
+    top: 0;
+  }
+  
+  header2{
+    font-size: 40px;
+  }
+  
+  h1{
+    width: 220px;
+    height: 90px;
+    float: left;
+    padding: 2px;
+    font-size: 50px;
+    
+  }
+  
+  .menu{
+    width: 900px;
+    margin: 0 auto;
+  }
+  header{
+    color: aliceblue;
+    background-color: rgb(52, 90, 140);
+    width: 100%;
+    clear: both;
+    content: '';
+    display: table;
+    padding: 2px;
+    }
+  
+  nav{
+    float: right;
+    font-size: 20px;
+  }
+  
+  nav ul li{
+    list-style: none;
+    margin-left: 90px;
+    padding: 12px 0;
+    float: left;
+    position: relative;
+  }
+  
+  nav ul li a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+  }
+  
+  nav ul li a::before{
+    display: block;
+    content: '';
+    width: 0%;
+    background:#444 ;
+    height: 5px;
+    top: 0;
+    position: absolute;
+    transition: width 0.2s;
+  }
+  
+  nav ul li a:hover::before{
+  width: 100%;
+  }
+  
+  img{
+    width: 500px;
+  }
+  main{
+  
+  }
+  
+  

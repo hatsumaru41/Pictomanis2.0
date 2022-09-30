@@ -36,7 +36,7 @@ const routes: Routes = [
 },
 {
   path: 'membership', component:MembershipComponent,children:[
-    {path: 'nuevo', component: MembershipCreaeditaComponent}
+    {path: 'nuevo', component: MembershipCreaeditaComponent},
   ]
 },
 {
