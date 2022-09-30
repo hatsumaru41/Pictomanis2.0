@@ -41,7 +41,8 @@ const routes: Routes = [
 },
 {
   path: 'rol', component:RolComponent,children:[
-    {path: 'nuevo', component: RolCreaeditaComponent}
+    {path: 'nuevo', component: RolCreaeditaComponent},
+    { path: 'edicion/:id', component: RolCreaeditaComponent }
   ]
 },
 {
