@@ -38,6 +38,11 @@ import { UsuarioCreaeditaComponent } from './page/usuario/usuario-creaedita/usua
 import { UsuarioComponent } from './page/usuario/usuario.component';
 import { UsuarioListarComponent } from './page/usuario/usuario-listar/usuario-listar.component';
 import { UsuarioDialogoComponent } from './page/usuario/usuario-listar/usuario-dialogo/usuario-dialogo.component';
+import { PictogramasComponent } from './page/pictogramas/pictogramas.component';
+import { PictogramasCreaeditaComponent } from './page/pictogramas/pictogramas-creaedita/pictogramas-creaedita.component';
+import { PictogramasListarComponent } from './page/pictogramas/pictogramas-listar/pictogramas-listar.component';
+import { PictogramasBuscarComponent } from './page/pictogramas/pictogramas-buscar/pictogramas-buscar.component';
+import { PictogramaDialogoComponent } from './page/pictogramas/pictograma-dialogo/pictograma-dialogo.component';
 
 @NgModule({
   declarations: [
@@ -61,7 +66,12 @@ import { UsuarioDialogoComponent } from './page/usuario/usuario-listar/usuario-d
     UsuarioListarComponent,
     UsuarioCreaeditaComponent,
     MembershipDialogoComponent,
-    UsuarioDialogoComponent
+    UsuarioDialogoComponent,
+    PictogramasComponent,
+    PictogramasCreaeditaComponent,
+    PictogramasListarComponent,
+    PictogramasBuscarComponent,
+    PictogramaDialogoComponent
   ],
   imports: [
     BrowserModule,
@@ -73,6 +83,7 @@ import { UsuarioDialogoComponent } from './page/usuario/usuario-listar/usuario-d
     MatButtonModule,
     MatIconModule,
     FormsModule,
+    RouterTestingModule,
     MatDialogModule
   ],
   providers: [],

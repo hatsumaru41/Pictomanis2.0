@@ -1,0 +1,26 @@
+<p>pictograma-creaedita works!</p>
+<div class="container">
+
+    <h1>Pictograma</h1>
+  
+    <mat-form-field class="example-full-width">
+      <mat-label>idPictograma</mat-label>
+      <input matInput placeholder="Id" [(ngModel)]="Pictograma.idPictograma">
+    </mat-form-field>
+  
+    <br>
+  
+    <mat-form-field class="example-full-width">
+      <mat-label>NombrePictograma</mat-label>
+      <input matInput required placeholder="name" [(ngModel)]="Pictograma.namePictograma">
+  
+    </mat-form-field>
+  
+    <br>
+   
+    <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
+    <button mat-raised-button color="warn" routerLink="/pictograma">Cancelar</button>
+    <p>{{mensaje}}</p>
+  
+  </div>
+  

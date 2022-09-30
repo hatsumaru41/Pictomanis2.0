@@ -13,6 +13,8 @@ import { RolComponent } from './page/rol/rol.component';
 import { RolCreaeditaComponent } from './page/rol/rol-creaedita/rol-creaedita.component';
 import { UsuarioComponent } from './page/usuario/usuario.component';
 import { UsuarioCreaeditaComponent } from './page/usuario/usuario-creaedita/usuario-creaedita.component';
+import { PictogramasCreaeditaComponent } from './page/pictogramas/pictogramas-creaedita/pictogramas-creaedita.component';
+import { PictogramasComponent } from './page/pictogramas/pictogramas.component';
 
 const routes: Routes = [
   {
@@ -47,7 +49,13 @@ const routes: Routes = [
     { path: 'edicion/:id', component: UsuarioCreaeditaComponent }
   ]
 },
-
+{
+  path: 'pictogramas',component:PictogramasComponent,children:[
+   {path:'nuevo', component:PictogramasComponent},
+   {path:'edicion/id',component:PictogramasCreaeditaComponent}
+  ]
+ 
+ },
 
 ];
 
