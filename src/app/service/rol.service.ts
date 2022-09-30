@@ -1,25 +1,48 @@
-import { HttpClient } from '@angular/common/http';
+import { rol } from './../model/rol';
 import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs';
-import { rol } from '../model/rol';
-
+import { HttpClient } from '@angular/common/http'
+import { Subject, EMPTY } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class RolService {
-  url:string="http://localhost:5000/Rol"
+export class rolService {
+  url: string = "http://localhost:5000/rol";
   private listaCambio = new Subject<rol[]>()
-    constructor(private http:HttpClient) { }
-    listar(){
-      return this.http.get<rol[]>(this.url);
+  private confirmaEliminacion = new Subject<Boolean>()
+  constructor(private http: HttpClient) { }
+
+  listar() {
+    return this.http.get<rol[]>(this.url);
+  }
+  insertar(Rol: rol) {
+      return this.http.post(this.url, rol);
     }
-    insertar(idiomas: rol){
-      return this.http.post(this.url, idiomas);
+  setLista(listaNueva: rol[]) {
+    this.listaCambio.next(listaNueva);
+  }
+  getLista() {
+    return this.listaCambio.asObservable();
+  }
+  modificar(Rol: rol){
+    return this.http.put(this.url + "/" + Rol.id, Rol);
+  }
+  listarId(id: number) {
+    return this.http.get<rol>(`${this.url}/${id}`);
+  }
+  eliminar(id: number) {
+    return this.http.delete(this.url + "/" + id);
+  }
+  getConfirmaEliminacion() {
+    return this.confirmaEliminacion.asObservable();
+  }
+  setConfirmaEliminacion(estado: Boolean) {
+    this.confirmaEliminacion.next(estado);
+  }
+  buscar(texto: string) {
+    if (texto.length != 0) {
+      return this.http.post<rol[]>(`${this.url}/buscar`, texto.toLowerCase(), {
+      });
     }
-    setLista(listaNueva: rol[]){
-      this.listaCambio.next(listaNueva);
-    }
-    getLista() {
-      return this.listaCambio.asObservable();
-    }
+    return EMPTY;
+  }
 }

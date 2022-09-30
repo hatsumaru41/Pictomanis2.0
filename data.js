@@ -95,7 +95,11 @@ module.exports = function () {
             {
                 id:2,
                 rolName: "Usuario",
-            }
+            },
+            {
+              id:3,
+              rolName: "Padre",
+          }
         ],
         usuarios: [
           {
