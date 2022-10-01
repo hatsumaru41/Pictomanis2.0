@@ -37,8 +37,8 @@ export class MembershipListarComponent implements OnInit {
     this.Vs.eliminar(id).subscribe(()=>{
       this.Vs.listar().subscribe(data=>{
         this.Vs.setLista(data);
-      })
-    })
+      });
+    });
   }
 
 }

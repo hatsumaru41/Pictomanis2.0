@@ -1,4 +1,7 @@
-<h1>Lista de Membresias</h1>
+<div class="container">
+  <div style="text-align: center;">
+    <h1>Lista de Membresias</h1>
+  </div>
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
     <!--- Note that these columns can be defined in any order.
@@ -6,7 +9,7 @@
   
     <!-- Position Column -->
     <ng-container matColumnDef="id">
-      <th mat-header-cell *matHeaderCellDef> No. </th>
+      <th mat-header-cell *matHeaderCellDef> ID </th>
       <td mat-cell *matCellDef="let element"> {{element.id}} </td>
     </ng-container>
   
@@ -22,18 +25,16 @@
     </ng-container>
 
     <ng-container matColumnDef="accion1">
-      <th mat-header-cell *matHeaderCellDef> Acciones </th>
+      <th mat-header-cell *matHeaderCellDef> </th>
       <td mat-cell *matCellDef="let element"> <button mat-raised-button color="primary"
           [routerLink]="['edicion', element?.id]">Actualizar</button>
-  
       </td>
     </ng-container>
 
     <ng-container matColumnDef="accion2">
-      <th mat-header-cell *matHeaderCellDef> Acciones </th>
+      <th mat-header-cell *matHeaderCellDef> </th>
       <td mat-cell *matCellDef="let element">
           <button mat-raised-button color="warn" (click)="confirmar(element.id)">Eliminar</button>
-  
       </td>
     </ng-container>
   
@@ -42,9 +43,9 @@
   </table>
 
   <div class="example-button-container">
-
     <button mat-mini-fab color="primary" aria-label="Example icon button with a plus one icon"
-      routerLink="/miembro/nuevo">
+      routerLink="/membership/nuevo">
       <mat-icon>plus_one</mat-icon>
     </button>
   </div>
+</div>
