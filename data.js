@@ -28,31 +28,25 @@ module.exports = function () {
             {
                 id: 1,
                 idiomas: "Japones ",
-                Resenas:{
-                    "id":2
-                }
+            
+                
+                
             },
             {
                 id: 2,
                 idiomas: "Espaniol ",
-                Resenas:{
-                    "id":3
-                },
+               
             },
             {
                 id: 3,
                 idiomas: "Ingles",
-                Resenas:{
-                    "id":2
-                },
+             
             },
             {
                 id: 4,
                 idiomas: "Coreano",
-                Resenas:{
-                    "id":2
-                }
-            }
+
+              }
         ],
         categorias: [
             {
