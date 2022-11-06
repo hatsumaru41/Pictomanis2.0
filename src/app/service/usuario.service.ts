@@ -6,7 +6,7 @@ import { Subject, EMPTY } from 'rxjs';
   providedIn: 'root'
 })
 export class UsuarioService {
-  url: string = "http://localhost:5000/usuario";
+  url: string = "http://localhost:8081/usuario";
   private listaCambio = new Subject<usuario[]>()
   private confirmaEliminacion = new Subject<Boolean>()
   constructor(private http: HttpClient) { }
