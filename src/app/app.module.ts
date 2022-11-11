@@ -15,10 +15,6 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { FormsModule } from '@angular/forms';
 import { MatSelectModule } from '@angular/material/select';
 
-import { CategoriasComponent } from './page/categorias/categorias.component';
-import { CategoriasListarComponent } from './page/categorias/categorias-listar/categorias-listar.component';
-import { CategoriasCreaeditaComponent } from './page/categorias/categorias-creaedita/categorias-creaedita.component';
-
 import { IdiomasComponent } from './page/idiomas/idiomas.component';
 import { IdiomasListarComponent } from './page/idiomas/idiomas-listar/idiomas-listar.component';
 import { IdiomasCreaeditaComponent } from './page/idiomas/idiomas-creaedita/idiomas-creaedita.component';
@@ -49,16 +45,18 @@ import { PictogramaDialogoComponent } from './page/pictogramas/pictograma-dialog
 import { UsuarioBuscarComponent } from './page/usuario/usuario-buscar/usuario-buscar.component';
 import { rolBuscarComponent } from './page/rol/rol-buscar/rol-buscar.component';
 import { IdiomasBuscarComponent } from './page/idiomas/idiomas-buscar/idiomas-buscar.component';
-import { CategoriasBuscarComponent } from './page/categorias/categorias-buscar/categorias-buscar.component';
-import { CategoriasDialogoComponent } from './page/categorias/categorias-listar/categorias-dialogo/categorias-dialogo.component';
+
 import { ResenasBuscarComponent } from './page/resenas/resenas-buscar/resenas-buscar.component';
+
+import { CategoriaComponent } from './page/categoria/categoria.component';
+import { CategoriaBuscarComponent } from './page/categoria/categoria-buscar/categoria-buscar.component';
+import { CategoriaCreaeditaComponent } from './page/categoria/categoria-creaedita/categoria-creaedita.component';
+import { CategoriaListarComponent } from './page/categoria/categoria-listar/categoria-listar.component';
+import { CategoriaDialogoComponent } from './page/categoria/categoria-listar/categoria-dialogo/categoria-dialogo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CategoriasComponent,
-    CategoriasListarComponent,
-    CategoriasCreaeditaComponent,
     IdiomasComponent,
     IdiomasListarComponent,
     IdiomasCreaeditaComponent,
@@ -84,9 +82,13 @@ import { ResenasBuscarComponent } from './page/resenas/resenas-buscar/resenas-bu
     PictogramaDialogoComponent,
     UsuarioBuscarComponent,
     rolBuscarComponent,
-    CategoriasBuscarComponent,
-    CategoriasDialogoComponent,
     ResenasBuscarComponent
+    
+    CategoriaComponent,
+    CategoriaBuscarComponent,
+    CategoriaCreaeditaComponent,
+    CategoriaListarComponent,
+    CategoriaDialogoComponent
 
   ],
   imports: [
@@ -103,7 +105,7 @@ import { ResenasBuscarComponent } from './page/resenas/resenas-buscar/resenas-bu
     MatDialogModule,
     MatSelectModule,
     RouterModule.forRoot([
-      {path: 'categorias-listar', component: CategoriasListarComponent},
+      {path: 'categoria-listar', component: CategoriaListarComponent},
       {path: 'idiomas-listar', component: IdiomasListarComponent},
       {path: 'membership-listar', component: MembershipListarComponent},
       {path: 'pictogramas-listar', component: PictogramasListarComponent},

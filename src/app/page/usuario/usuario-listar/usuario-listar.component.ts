@@ -38,9 +38,5 @@ export class UsuarioListarComponent implements OnInit {
         this.us.setLista(data);/* se ejecuta la línea 27*/
       });
     });
-
-
-
-
   }
 }

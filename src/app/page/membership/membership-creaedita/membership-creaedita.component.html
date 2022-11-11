@@ -19,11 +19,12 @@
         <mat-label>Tipo de Membresia</mat-label>
         <input matInput required placeholder="name" [(ngModel)]="membership.type">
     
-      </mat-form-field>
+    </mat-form-field>
       <br>
     <br>
+
     <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
-    <button mat-raised-button color="warn" routerLink="/idiomas">Cancelar</button>
+    <button mat-raised-button color="warn" routerLink="/membership">Cancelar</button>
     <p>{{mensaje}}</p>
   
   </div>
