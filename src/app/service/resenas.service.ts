@@ -7,7 +7,7 @@ import { Resenas } from '../model/resenas';
   providedIn: 'root'
 })
 export class ResenasService {
-url:string="http://localhost:5000/resenas"
+url:string="http://localhost:8081/resenas"
 private listaCambio = new Subject<Resenas[]>()
   constructor(private http:HttpClient) { }
 
