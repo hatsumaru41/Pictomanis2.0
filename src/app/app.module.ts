@@ -82,8 +82,7 @@ import { CategoriaDialogoComponent } from './page/categoria/categoria-listar/cat
     PictogramaDialogoComponent,
     UsuarioBuscarComponent,
     rolBuscarComponent,
-    ResenasBuscarComponent
-    
+    ResenasBuscarComponent,
     CategoriaComponent,
     CategoriaBuscarComponent,
     CategoriaCreaeditaComponent,
