@@ -5,8 +5,6 @@ import { IdiomasComponent } from './page/idiomas/idiomas.component';
 import { ResenasComponent } from './page/resenas/resenas.component';
 import { ResenasCreaeditaComponent } from './page/resenas/resenas-creaedita/resenas-creaedita.component';
 import { ResenasService } from './service/resenas.service';
-import { CategoriasComponent } from './page/categorias/categorias.component';
-import { CategoriasCreaeditaComponent } from './page/categorias/categorias-creaedita/categorias-creaedita.component';
 import { MembershipComponent } from './page/membership/membership.component';
 import { MembershipCreaeditaComponent } from './page/membership/membership-creaedita/membership-creaedita.component';
 import { RolComponent } from './page/rol/rol.component';
@@ -15,6 +13,8 @@ import { UsuarioComponent } from './page/usuario/usuario.component';
 import { UsuarioCreaeditaComponent } from './page/usuario/usuario-creaedita/usuario-creaedita.component';
 import { PictogramasCreaeditaComponent } from './page/pictogramas/pictogramas-creaedita/pictogramas-creaedita.component';
 import { PictogramasComponent } from './page/pictogramas/pictogramas.component';
+import { CategoriaComponent } from './page/categoria/categoria.component';
+import { CategoriaCreaeditaComponent } from './page/categoria/categoria-creaedita/categoria-creaedita.component';
 
 const routes: Routes = [
   {
@@ -31,9 +31,9 @@ const routes: Routes = [
     ]
   },
   {
-    path: 'categorias', component: CategoriasComponent, children: [
-      { path: 'nuevo', component: CategoriasCreaeditaComponent },
-      { path: 'edicion/:id', component: CategoriasCreaeditaComponent}
+    path: 'categoria', component: CategoriaComponent, children: [
+      { path: 'nuevo', component: CategoriaCreaeditaComponent },
+      { path: 'edicion/:id', component: CategoriaCreaeditaComponent}
     ]
   },
   {

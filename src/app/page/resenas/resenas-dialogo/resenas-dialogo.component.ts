@@ -8,15 +8,17 @@ import { ResenasService } from 'src/app/service/resenas.service';
   templateUrl: './resenas-dialogo.component.html',
   styleUrls: ['./resenas-dialogo.component.css']
 })
-export class ResenasDialogoComponent implements OnInit {
 
-  constructor(private resenasService : ResenasService,
-    private dialogRef: MatDialogRef<ResenasDialogoComponent>) { }
+export class resenasDialogoComponent implements OnInit {
+
+  constructor(private ResenasService:ResenasService,private dialogRef:MatDialogRef<resenasDialogoComponent>) { }
 
   ngOnInit(): void {
   }
-  confirmar(estado: boolean) {
-    this.resenasService.setConfirmaEliminacion(estado);
-    this.dialogRef.close();
-  }
+  confirmar(estado:boolean){
+    this.ResenasService.setConfirmaEliminacion(estado);
+    this.dialogRef.close() ; 
+
+}
+
 }

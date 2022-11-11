@@ -28,14 +28,10 @@ module.exports = function () {
             {
                 id: 1,
                 idiomas: "Japones ",
-            
-                
-                
             },
             {
                 id: 2,
                 idiomas: "Espaniol ",
-               
             },
             {
                 id: 3,
@@ -48,14 +44,14 @@ module.exports = function () {
 
               }
         ],
-        categorias: [
+        categoria: [
             {
-                id:1,
-                Categorias: "Indicaciones",
+                idCategoria:1,
+                nameCategoria: "Indicaciones",
             },
             {
-                id:2,
-                Categorias: "Objetos",
+                idCategoria:2,
+                nameCategoria: "Objetos",
             }
         ],
         membership: [

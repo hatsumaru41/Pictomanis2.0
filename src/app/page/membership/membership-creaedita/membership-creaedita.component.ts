@@ -24,13 +24,21 @@ export class MembershipCreaeditaComponent implements OnInit {
   }
   aceptar(): void {
     if (this.membership.miembro.length > 0) {
-
-      this.membershipService.insertar(this.membership).subscribe(data => {
-        this.membershipService.listar().subscribe(data => {
-          this.membershipService.setLista(data);
+      if(this.edicion){
+        this.membershipService.insertar(this.membership).subscribe(data => {
+          this.membershipService.listar().subscribe(data => {
+            this.membershipService.setLista(data);
+          })
         })
-      })
-      this.router.navigate(['Membership']);
+      }
+      else{
+        this.membershipService.insertar(this.membership).subscribe(data =>{
+          this.membershipService.listar().subscribe(data =>{
+            this.membershipService.setLista(data);
+          })
+        })
+      }
+      this.router.navigate(['membership']);
     }
     else{
       this.mensaje = "Complete los datos requeridos"
