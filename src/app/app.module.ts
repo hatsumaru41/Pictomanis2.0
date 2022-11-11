@@ -13,6 +13,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from'@angular/material/icon';
 import { MatDialogModule } from '@angular/material/dialog';
 import { FormsModule } from '@angular/forms';
+import { MatSelectModule } from '@angular/material/select';
 
 import { CategoriasComponent } from './page/categorias/categorias.component';
 import { CategoriasListarComponent } from './page/categorias/categorias-listar/categorias-listar.component';
@@ -50,6 +51,7 @@ import { rolBuscarComponent } from './page/rol/rol-buscar/rol-buscar.component';
 import { IdiomasBuscarComponent } from './page/idiomas/idiomas-buscar/idiomas-buscar.component';
 import { CategoriasBuscarComponent } from './page/categorias/categorias-buscar/categorias-buscar.component';
 import { CategoriasDialogoComponent } from './page/categorias/categorias-listar/categorias-dialogo/categorias-dialogo.component';
+import { ResenasBuscarComponent } from './page/resenas/resenas-buscar/resenas-buscar.component';
 
 @NgModule({
   declarations: [
@@ -83,7 +85,8 @@ import { CategoriasDialogoComponent } from './page/categorias/categorias-listar/
     UsuarioBuscarComponent,
     rolBuscarComponent,
     CategoriasBuscarComponent,
-    CategoriasDialogoComponent
+    CategoriasDialogoComponent,
+    ResenasBuscarComponent
 
   ],
   imports: [
@@ -98,6 +101,7 @@ import { CategoriasDialogoComponent } from './page/categorias/categorias-listar/
     FormsModule,
     RouterTestingModule,
     MatDialogModule,
+    MatSelectModule,
     RouterModule.forRoot([
       {path: 'categorias-listar', component: CategoriasListarComponent},
       {path: 'idiomas-listar', component: IdiomasListarComponent},

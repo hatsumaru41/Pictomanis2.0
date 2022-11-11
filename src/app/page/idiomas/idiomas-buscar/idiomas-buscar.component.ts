@@ -17,7 +17,7 @@ export class IdiomasBuscarComponent implements OnInit {
     let array: Idiomas[] = [];
     this.idiomaService.listar().subscribe(data => {
       data.forEach((element, index) => {
-        if (element.idiomas.includes(e.target.value)) {
+        if (element.nameIdiomas.includes(e.target.value)) {
           array.push(data[index]);
         }
       });
