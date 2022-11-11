@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Categoria } from 'src/app/model/categoria';
 import { CategoriaService } from 'src/app/service/categoria.service';
+
 @Component({
   selector: 'app-categoria-buscar',
   templateUrl: './categoria-buscar.component.html',
@@ -8,19 +9,19 @@ import { CategoriaService } from 'src/app/service/categoria.service';
 })
 export class CategoriaBuscarComponent implements OnInit {
   textoBuscar: string = ""
-  constructor(private CategoriaService: CategoriaService) { }
+  constructor(private categoriaService: CategoriaService) { }
 
   ngOnInit(): void {
   }
   buscar(e: any){
     let array: Categoria[] = [];
-    this.CategoriaService.listar().subscribe(data =>{
+    this.categoriaService.listar().subscribe(data =>{
       data.forEach((element, index) =>{
         if (element.nameCategoria.includes(e.target.value)){
           array.push(data[index]);
         }
       });
-      this.CategoriaService.setLista(array);
+      this.categoriaService.setLista(array);
     })
   }
 }

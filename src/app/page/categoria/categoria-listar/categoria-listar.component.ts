@@ -4,6 +4,8 @@ import { Component, OnInit } from '@angular/core';
 import { Categoria } from 'src/app/model/categoria';
 import { CategoriaDialogoComponent } from './categoria-dialogo/categoria-dialogo.component';
 import { CategoriaService } from 'src/app/service/categoria.service';
+import { Pictograma } from 'src/app/model/pictograma';
+import { PictogramaService } from 'src/app/service/pictogramas.service';
 
 @Component({
   selector: 'app-categoria-listar',
@@ -12,9 +14,11 @@ import { CategoriaService } from 'src/app/service/categoria.service';
 })
 export class CategoriaListarComponent implements OnInit {
   dataSource: MatTableDataSource<Categoria> = new MatTableDataSource();
-  displayedColumns: string[] = ['idCategoria','nameCategoria','accion1','accion2'];
+  displayedColumns: string[] = ['idCategoria','nameCategoria','pictograma','accion1','accion2'];
+  listaPictograma: Pictograma[] = [];
+  idPictogramaSeleccionado: number = 0;
   private idMayor: number = 0;
-  constructor(private Vs:CategoriaService, private dialog: MatDialog) { }
+  constructor(private Vs:CategoriaService, private dialog: MatDialog, private pictogramaService:PictogramaService) { }
 
   ngOnInit(): void {
     this.Vs.listar().subscribe(d =>{
@@ -26,6 +30,9 @@ export class CategoriaListarComponent implements OnInit {
     this.Vs.getConfirmaEliminacion().subscribe(data => {
       data == true ? this.eliminar(this.idMayor) : false;
     });
+    this.pictogramaService.listar().subscribe(data =>{
+      this.listaPictograma = data
+    });
   }
   confirmar(idCategoria: number) {
     this.idMayor = idCategoria;
@@ -34,7 +41,7 @@ export class CategoriaListarComponent implements OnInit {
   eliminar(id: number) {
     this.Vs.eliminar(id).subscribe(() => {
       this.Vs.listar().subscribe(data => {
-        this.Vs.setLista(data);/* se ejecuta la línea 27*/
+        this.Vs.setLista(data);
       });
     });
   }
