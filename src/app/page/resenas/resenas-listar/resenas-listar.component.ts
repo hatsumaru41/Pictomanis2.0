@@ -5,7 +5,7 @@ import { Pictograma } from 'src/app/model/pictograma';
 import { ResenasService } from 'src/app/service/resenas.service';
 import {MatTableDataSource} from '@angular/material/table'
 import { Resenas } from 'src/app/model/resenas';
-import { ResenasDialogoComponent } from '../resenas-dialogo/resenas-dialogo.component';
+import { resenasDialogoComponent } from '../resenas-dialogo/resenas-dialogo.component';
 @Component({
   selector: 'app-resenas-listar',
   templateUrl: './resenas-listar.component.html',
@@ -14,8 +14,8 @@ import { ResenasDialogoComponent } from '../resenas-dialogo/resenas-dialogo.comp
 export class ResenasListarComponent implements OnInit {
 dataSource:MatTableDataSource<Resenas>=new MatTableDataSource();
 displayedColumns:string[]=['id','nameResenas','descripcionResenas','Pictogramas','accion1','accion2']
-listaPictogramas : Pictograma[] = [] ; 
-idPictogramasSeleccionado : number = 0 ; 
+listaPictograma : Pictograma[] = [];
+idPictogramaSeleccionado : number = 0 ; 
 private idMayor : number = 0 ; 
 constructor(private ps:ResenasService , private dialog:MatDialog, private PictogramaService : PictogramaService) { }
 
@@ -30,12 +30,12 @@ constructor(private ps:ResenasService , private dialog:MatDialog, private Pictog
       data == true ? this.eliminar(this.idMayor) : false;
     });
     
-    this.pictogramaService.listar().subscribe(data => { this.listaPictograma = data });
+    this.PictogramaService.listar().subscribe(data => { this.listaPictograma = data });
 
   }
   confirmar(id: number) {
     this.idMayor = id;
-    this.dialog.open(ResenasDialogoComponent);
+    this.dialog.open(resenasDialogoComponent);
   }
 
   eliminar(id: number) {
