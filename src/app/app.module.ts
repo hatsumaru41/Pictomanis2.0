@@ -30,7 +30,7 @@ import { ResenasComponent } from './page/resenas/resenas.component';
 import { ResenasListarComponent } from './page/resenas/resenas-listar/resenas-listar.component';
 import { ResenasCreaeditaComponent } from './page/resenas/resenas-creaedita/resenas-creaedita.component';
 import { ResenasBuscarComponent } from './page/resenas/resenas-buscar/resenas-buscar.component';
-import { ResenasDialogoComponent } from './page/resenas/resenas-dialogo/resenas-dialogo.component';
+import { resenasDialogoComponent } from './page/resenas/resenas-dialogo/resenas-dialogo.component';
 
 import { MembershipComponent } from './page/membership/membership.component';
 import { MembershipListarComponent } from './page/membership/membership-listar/membership-listar.component';
@@ -53,7 +53,7 @@ import { PictogramasComponent } from './page/pictogramas/pictogramas.component';
 import { PictogramasCreaeditaComponent } from './page/pictogramas/pictogramas-creaedita/pictogramas-creaedita.component';
 import { PictogramasListarComponent } from './page/pictogramas/pictogramas-listar/pictogramas-listar.component';
 import { PictogramasBuscarComponent } from './page/pictogramas/pictogramas-buscar/pictogramas-buscar.component';
-import { PictogramaDialogoComponent } from './page/pictogramas/pictograma-dialogo/pictograma-dialogo.component';
+import { PictogramasDialogoComponent } from './page/pictogramas/pictogramas-listar/pictogramas-dialogo/pictogramas-dialogo.component';
 
 @NgModule({
   declarations: [
@@ -71,7 +71,7 @@ import { PictogramaDialogoComponent } from './page/pictogramas/pictograma-dialog
     ResenasListarComponent,
     ResenasCreaeditaComponent,
     ResenasBuscarComponent,
-    ResenasDialogoComponent,
+    resenasDialogoComponent,
     MembershipComponent,
     MembershipListarComponent,
     MembershipCreaeditaComponent,
@@ -87,9 +87,10 @@ import { PictogramaDialogoComponent } from './page/pictogramas/pictograma-dialog
     PictogramasCreaeditaComponent,
     PictogramasListarComponent,
     PictogramasBuscarComponent,
-    PictogramaDialogoComponent,
+    PictogramasDialogoComponent,
     UsuarioBuscarComponent,
     rolBuscarComponent,
+    PictogramasDialogoComponent,
   ],
   imports: [
     BrowserModule,
