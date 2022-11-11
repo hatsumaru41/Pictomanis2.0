@@ -13,6 +13,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from'@angular/material/icon';
 import { MatDialogModule } from '@angular/material/dialog';
 import { FormsModule } from '@angular/forms';
+import { MatSelectModule } from '@angular/material/select';
 
 import { IdiomasComponent } from './page/idiomas/idiomas.component';
 import { IdiomasListarComponent } from './page/idiomas/idiomas-listar/idiomas-listar.component';
@@ -44,6 +45,8 @@ import { PictogramaDialogoComponent } from './page/pictogramas/pictograma-dialog
 import { UsuarioBuscarComponent } from './page/usuario/usuario-buscar/usuario-buscar.component';
 import { rolBuscarComponent } from './page/rol/rol-buscar/rol-buscar.component';
 import { IdiomasBuscarComponent } from './page/idiomas/idiomas-buscar/idiomas-buscar.component';
+
+import { ResenasBuscarComponent } from './page/resenas/resenas-buscar/resenas-buscar.component';
 
 import { CategoriaComponent } from './page/categoria/categoria.component';
 import { CategoriaBuscarComponent } from './page/categoria/categoria-buscar/categoria-buscar.component';
@@ -79,6 +82,8 @@ import { CategoriaDialogoComponent } from './page/categoria/categoria-listar/cat
     PictogramaDialogoComponent,
     UsuarioBuscarComponent,
     rolBuscarComponent,
+    ResenasBuscarComponent
+    
     CategoriaComponent,
     CategoriaBuscarComponent,
     CategoriaCreaeditaComponent,
@@ -98,6 +103,7 @@ import { CategoriaDialogoComponent } from './page/categoria/categoria-listar/cat
     FormsModule,
     RouterTestingModule,
     MatDialogModule,
+    MatSelectModule,
     RouterModule.forRoot([
       {path: 'categoria-listar', component: CategoriaListarComponent},
       {path: 'idiomas-listar', component: IdiomasListarComponent},

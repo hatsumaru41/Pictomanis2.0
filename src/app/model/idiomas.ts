@@ -1,7 +1,7 @@
 import { Resenas } from "./resenas";
 
 export class Idiomas{
-    id:number=0;
-    idiomas:string = "";
+    idIdiomas:number=0;
+    nameIdiomas:string = "";
     resenas:Resenas=new Resenas();
   }

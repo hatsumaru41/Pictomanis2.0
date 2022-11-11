@@ -24,7 +24,7 @@ private confirmaEliminacion = new Subject<Boolean>()
     return this.listaCambio.asObservable();
   }
   modificar(types: Idiomas) {
-  return this.http.put(this.url + '/' + types.id, types);
+  return this.http.put(this.url + '/' + types.idIdiomas, types);
 }
 
   listarId(id: number) {
