@@ -1,18 +1,18 @@
-<app-categorias-buscar></app-categorias-buscar>
-<h1>Lista de Categorias</h1>
+<app-categoria-buscar></app-categoria-buscar>
+<h1>Lista de Categoria</h1>
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
     <!--- Note that these columns can be defined in any order.
           The actual rendered columns are set as a property on the row definition" -->
 
     <!-- Position Column -->
-    <ng-container matColumnDef="id">
+    <ng-container matColumnDef="idCategoria">
       <th mat-header-cell *matHeaderCellDef> No. </th>
       <td mat-cell *matCellDef="let element"> {{element.idCategoria}} </td>
     </ng-container>
 
     <!-- Name Column -->
-    <ng-container matColumnDef="categorias">
+    <ng-container matColumnDef="nameCategoria">
       <th mat-header-cell *matHeaderCellDef> Name </th>
       <td mat-cell *matCellDef="let element"> {{element.nameCategoria}} </td>
     </ng-container>
@@ -37,7 +37,7 @@
 
   <div class="example-button-container">
     <button mat-mini-fab color="primary" aria-label="Example icon button with a plus one icon"
-      routerLink="/categorias/nuevo">
+      routerLink="/categoria/nuevo">
       <mat-icon>plus_one</mat-icon>
     </button>
   </div>

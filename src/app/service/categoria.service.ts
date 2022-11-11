@@ -1,4 +1,4 @@
-import { Categorias } from '../model/categoria';
+import { Categoria } from 'src/app/model/categoria';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Subject, EMPTY } from 'rxjs';
@@ -6,28 +6,28 @@ import { Subject, EMPTY } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class CategoriasService {
-  url:string="http://localhost:8081/Categorias"
-  private listaCambio = new Subject<Categorias[]>()
+export class CategoriaService {
+  url:string="http://localhost:8081/categoria"
+  private listaCambio = new Subject<Categoria[]>()
   private confirmaEliminacion = new Subject<Boolean>()
   constructor(private http:HttpClient) { }
   listar(){
-    return this.http.get<Categorias[]>(this.url);
+    return this.http.get<Categoria[]>(this.url);
   }
-  insertar(idiomas: Categorias){
-    return this.http.post(this.url, idiomas);
+  insertar(Categoria: Categoria){
+    return this.http.post(this.url, Categoria);
   }
-  setLista(listaNueva: Categorias[]){
+  setLista(listaNueva: Categoria[]){
     this.listaCambio.next(listaNueva);
   }
   getLista() {
     return this.listaCambio.asObservable();
   }
-  modificar(Categorias: Categorias){
-    return this.http.put(this.url + "/" + Categorias.idCategoria, Categorias);
+  modificar(types: Categoria){
+    return this.http.put(this.url + '/' + types.idCategoria, Categoria);
   }
   listarId(id: number){
-    return this.http.get<Categorias>(`${this.url}/${id}`);
+    return this.http.get<Categoria>(`${this.url}/${id}`);
   }
   eliminar(id: number) {
     return this.http.delete(this.url + "/" + id);
@@ -40,7 +40,7 @@ export class CategoriasService {
   }
   buscar(texto: string) {
     if (texto.length != 0) {
-      return this.http.post<Categorias[]>(`${this.url}/buscar`, texto.toLowerCase(), {
+      return this.http.post<Categoria[]>(`${this.url}/buscar`, texto.toLowerCase(), {
       });
     }
     return EMPTY;
