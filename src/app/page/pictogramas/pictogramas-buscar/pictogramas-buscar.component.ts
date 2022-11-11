@@ -16,20 +16,20 @@ export class PictogramasBuscarComponent implements OnInit {
   }
   buscar(e: any)
   {
-   let array: Pictograma[] = [] ; 
+   let array: Pictograma[] = [] ;
    this.PictogramaService.listar().subscribe(data => {
       data.forEach((element,index)=>{
        if (element.namePictograma.includes(e.target.value)){
-          array.push(data[index]) ; 
+          array.push(data[index]) ;
        }
 
-      }) ; 
-      this.PictogramaService.setLista(array) ; 
+      }) ;
+      this.PictogramaService.setLista(array) ;
 
 
 
    })
- 
+
 
 
 
