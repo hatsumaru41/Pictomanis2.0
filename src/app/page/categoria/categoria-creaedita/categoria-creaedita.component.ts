@@ -2,8 +2,6 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
 import { CategoriaService } from './../../../service/categoria.service';
 import { Categoria } from './../../../model/categoria';
 import { Component, OnInit } from '@angular/core';
-import { Pictograma } from 'src/app/model/pictograma';
-import { PictogramaService } from 'src/app/service/pictogramas.service';
 
 @Component({
   selector: 'app-categoria-creaedita',
@@ -15,9 +13,7 @@ export class CategoriaCreaeditaComponent implements OnInit {
   mensaje: string = "Complete los campos asignados";
   edicion: boolean = false;
   id: number = 0;
-  listaPictograma: Pictograma[] = [];
-  idPictogramaSeleccionado: number = 0;
-  constructor(private categoriaService: CategoriaService, private router: Router, private route: ActivatedRoute, private pictogramaService: PictogramaService) { }
+  constructor(private categoriaService: CategoriaService, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.route.params.subscribe((data: Params) => {
@@ -25,15 +21,10 @@ export class CategoriaCreaeditaComponent implements OnInit {
       this.edicion = data['id'] != null;
       this.init();
     });
-    this.pictogramaService.listar().subscribe(data =>{
-      this.listaPictograma = data});
   }
 
   aceptar(): void {
-    if (this.categoria.nameCategoria.length > 0 && this.idPictogramaSeleccionado > 0) {
-      let d = new Pictograma();
-      d.idPictograma = this.idPictogramaSeleccionado;
-      this.categoria.pictograma = d;
+    if (this.categoria.nameCategoria.length > 0 ) {
       if (this.edicion) {
         this.categoriaService.modificar(this.categoria).subscribe(data => {
           this.categoriaService.listar().subscribe(data => {
@@ -58,7 +49,6 @@ export class CategoriaCreaeditaComponent implements OnInit {
       this.categoriaService.listarId(this.id).subscribe(data=>{
         this.categoria = data;
         console.log(data);
-        this.idPictogramaSeleccionado = data.pictograma.idPictograma;
       })
     }
   }

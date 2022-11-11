@@ -5,36 +5,36 @@
     <app-pictogramas-buscar></app-pictogramas-buscar>
 
     <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
-    
-      <!--- Note that these columns can be defined in any order.
-              The actual rendered columns are set as a property on the row definition" -->
-    
-      <!-- Position Column -->
+ 
       <ng-container matColumnDef="idPictograma">
-        <th mat-header-cell *matHeaderCellDef> IDPictograma . </th>
+        <th mat-header-cell *matHeaderCellDef> ID . </th>
         <td mat-cell *matCellDef="let element"> {{element.idPictograma}} </td>
       </ng-container>
     
-      <!-- Name Column -->
       <ng-container matColumnDef="namePictograma">
-        <th mat-header-cell *matHeaderCellDef> Nombre_Pictograma </th>
+        <th mat-header-cell *matHeaderCellDef> Nombre </th>
         <td mat-cell *matCellDef="let element"> {{element.namePictograma}} </td>
       </ng-container>
     
-      <!-- Weight Column -->
-      <ng-container matColumnDef="id_usuario">
+      <ng-container matColumnDef="usuario">
         <th mat-header-cell *matHeaderCellDef> Usuario </th>
-        <td mat-cell *matCellDef="let element"> {{element.idUsuario}} </td>
+        <td mat-cell *matCellDef="let element"> {{element.usuario.nameUsuario}} </td>
       </ng-container>
+
+      <ng-container matColumnDef="categoria">
+        <th mat-header-cell *matHeaderCellDef> Categoria </th>
+        <td mat-cell *matCellDef="let element"> {{element.categoria.nameCategoria} </td>
+      </ng-container>
+
       <ng-container matColumnDef="accion1">
-        <th mat-header-cell *matHeaderCellDef> Acciones </th>
+        <th mat-header-cell *matHeaderCellDef></th>
         <td mat-cell *matCellDef="let element"> <button mat-raised-button color="primary"
             [routerLink]="['edicion', element?.idPictograma]">Actualizar</button>
     
         </td>
       </ng-container>
       <ng-container matColumnDef="accion2">
-        <th mat-header-cell *matHeaderCellDef> Acciones </th>
+        <th mat-header-cell *matHeaderCellDef></th>
         <td mat-cell *matCellDef="let element">
           <button mat-raised-button color="warn" (click)="confirmar( element.idPictograma )">Eliminar</button>
     
