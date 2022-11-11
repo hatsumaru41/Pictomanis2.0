@@ -1,5 +1,8 @@
+import { Pictograma } from "./pictograma";
+
 export class Resenas{
-    id:number=0;
+  idResenas:number=0;
     nameResenas:string = "";
     descripcionResenas:string = "";
+    pictograma:Pictograma=new Pictograma();
   }
