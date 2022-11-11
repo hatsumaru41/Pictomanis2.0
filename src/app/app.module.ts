@@ -56,9 +56,11 @@ import { ResenasBuscarComponent } from './page/resenas/resenas-buscar/resenas-bu
 @NgModule({
   declarations: [
     AppComponent,
-    CategoriasComponent,
-    CategoriasListarComponent,
-    CategoriasCreaeditaComponent,
+    CategoriaComponent,
+    CategoriaBuscarComponent,
+    CategoriaListarComponent,
+    CategoriaCreaeditaComponent,
+    CategoriaDialogoComponent,
     IdiomasComponent,
     IdiomasListarComponent,
     IdiomasCreaeditaComponent,
@@ -66,6 +68,7 @@ import { ResenasBuscarComponent } from './page/resenas/resenas-buscar/resenas-bu
     ResenasComponent,
     ResenasListarComponent,
     ResenasCreaeditaComponent,
+    ResenasBuscarComponent,
     MembershipComponent,
     MembershipListarComponent,
     MembershipCreaeditaComponent,
@@ -84,10 +87,6 @@ import { ResenasBuscarComponent } from './page/resenas/resenas-buscar/resenas-bu
     PictogramaDialogoComponent,
     UsuarioBuscarComponent,
     rolBuscarComponent,
-    CategoriasBuscarComponent,
-    CategoriasDialogoComponent,
-    ResenasBuscarComponent
-
   ],
   imports: [
     BrowserModule,
