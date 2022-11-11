@@ -1,4 +1,4 @@
-import { Categorias } from './../model/categorias';
+import { Categorias } from '../model/categoria';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Subject, EMPTY } from 'rxjs';
@@ -24,7 +24,7 @@ export class CategoriasService {
     return this.listaCambio.asObservable();
   }
   modificar(Categorias: Categorias){
-    return this.http.put(this.url + "/" + Categorias.id, Categorias);
+    return this.http.put(this.url + "/" + Categorias.idCategoria, Categorias);
   }
   listarId(id: number){
     return this.http.get<Categorias>(`${this.url}/${id}`);

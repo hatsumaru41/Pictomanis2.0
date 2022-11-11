@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
-import { CategoriasService } from 'src/app/service/categorias.service';
+import { CategoriasService } from 'src/app/service/categoria.service';
 
 @Component({
   selector: 'app-categorias-dialogo',

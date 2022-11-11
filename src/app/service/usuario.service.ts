@@ -24,7 +24,7 @@ export class UsuarioService {
     return this.listaCambio.asObservable();
   }
   modificar(Usuario: usuario){
-    return this.http.put(this.url + "/" + Usuario.id, Usuario);
+    return this.http.put(this.url + "/" + Usuario.idUsuario, Usuario);
   }
   listarId(id: number) {
     return this.http.get<usuario>(`${this.url}/${id}`);

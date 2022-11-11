@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
-import { Categorias } from 'src/app/model/categorias';
-import { CategoriasService } from 'src/app/service/categorias.service';
+import { Categorias } from 'src/app/model/categoria';
+import { CategoriasService } from 'src/app/service/categoria.service';
 import { MatDialog } from '@angular/material/dialog';
 import { CategoriasDialogoComponent } from './categorias-dialogo/categorias-dialogo.component';
 
@@ -12,7 +12,7 @@ import { CategoriasDialogoComponent } from './categorias-dialogo/categorias-dial
 })
 export class CategoriasListarComponent implements OnInit {
   dataSource: MatTableDataSource<Categorias> = new MatTableDataSource();
-  displayedColumns:string[]= ['id','categorias'];
+  displayedColumns:string[]= ['id','categorias', 'accion1', 'accion2'];
   private idMayor: number = 0;
   constructor(private Vs:CategoriasService, private dialog: MatDialog) { }
 
