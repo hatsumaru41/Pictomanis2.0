@@ -16,8 +16,8 @@ import { FormsModule } from '@angular/forms';
 import { MatSelectModule } from '@angular/material/select';
 
 import { CategoriaComponent } from './page/categoria/categoria.component';
-import { CategoriaListarComponent } from './page/categoria/categoria-listar/categoria-listar.component';
 import { CategoriaCreaeditaComponent } from './page/categoria/categoria-creaedita/categoria-creaedita.component';
+import { CategoriaListarComponent } from './page/categoria/categoria-listar/categoria-listar.component';
 import { CategoriaBuscarComponent } from './page/categoria/categoria-buscar/categoria-buscar.component';
 import { CategoriaDialogoComponent } from './page/categoria/categoria-listar/categoria-dialogo/categoria-dialogo.component';
 
@@ -58,9 +58,9 @@ import { PictogramaDialogoComponent } from './page/pictogramas/pictograma-dialog
   declarations: [
     AppComponent,
     CategoriaComponent,
-    CategoriaBuscarComponent,
     CategoriaListarComponent,
     CategoriaCreaeditaComponent,
+    CategoriaBuscarComponent,
     CategoriaDialogoComponent,
     IdiomasComponent,
     IdiomasListarComponent,
@@ -103,7 +103,7 @@ import { PictogramaDialogoComponent } from './page/pictogramas/pictograma-dialog
     MatDialogModule,
     MatSelectModule,
     RouterModule.forRoot([
-      {path: 'categorias-listar', component: CategoriaListarComponent},
+      {path: 'categoria-listar', component: CategoriaListarComponent},
       {path: 'idiomas-listar', component: IdiomasListarComponent},
       {path: 'membership-listar', component: MembershipListarComponent},
       {path: 'pictogramas-listar', component: PictogramasListarComponent},

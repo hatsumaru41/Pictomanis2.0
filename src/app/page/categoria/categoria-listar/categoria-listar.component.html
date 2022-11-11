@@ -1,24 +1,25 @@
-<app-categoria-buscar></app-categoria-buscar>
 <h1>Lista de Categoria</h1>
+<app-categoria-buscar></app-categoria-buscar>
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
-    <!--- Note that these columns can be defined in any order.
-          The actual rendered columns are set as a property on the row definition" -->
-
-    <!-- Position Column -->
-    <ng-container matColumnDef="idCategoria">
+    <ng-container matColumnDef="id">
       <th mat-header-cell *matHeaderCellDef> No. </th>
       <td mat-cell *matCellDef="let element"> {{element.idCategoria}} </td>
     </ng-container>
 
-    <!-- Name Column -->
-    <ng-container matColumnDef="nameCategoria">
+    
+    <ng-container matColumnDef="categoria">
       <th mat-header-cell *matHeaderCellDef> Name </th>
       <td mat-cell *matCellDef="let element"> {{element.nameCategoria}} </td>
     </ng-container>
 
+    <ng-container matColumnDef="pictograma">
+      <th mat-header-cell *matHeaderCellDef> Pictograma </th>
+      <td mat-cell *matCellDef="let element"> {{element.pictograma.namePictograma}} </td>
+    </ng-container>
+
     <ng-container matColumnDef="accion1">
-      <th mat-header-cell *matHeaderCellDef> Acciones </th>
+      <th mat-header-cell *matHeaderCellDef></th>
       <td mat-cell *matCellDef="let element"> <button mat-raised-button color="primary"
           [routerLink]="['edicion', element.idCategoria]">Actualizar</button>
 
@@ -26,7 +27,7 @@
     </ng-container>
 
     <ng-container matColumnDef="accion2">
-      <th mat-header-cell *matHeaderCellDef> Acciones </th>
+      <th mat-header-cell *matHeaderCellDef></th>
       <td mat-cell *matCellDef="let element">
           <button mat-raised-button color="warn" (click)="confirmar(element.idCategoria)">Eliminar</button>
       </td>

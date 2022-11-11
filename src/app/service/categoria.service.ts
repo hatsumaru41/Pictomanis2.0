@@ -24,7 +24,7 @@ export class CategoriaService {
     return this.listaCambio.asObservable();
   }
   modificar(types: Categoria){
-    return this.http.put(this.url + '/' + types.idCategoria, Categoria);
+    return this.http.put(this.url + '/' + types.idCategoria, types);
   }
   listarId(id: number){
     return this.http.get<Categoria>(`${this.url}/${id}`);
