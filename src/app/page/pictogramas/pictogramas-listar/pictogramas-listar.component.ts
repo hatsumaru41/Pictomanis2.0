@@ -1,3 +1,4 @@
+import { usuario } from './../../../model/usuario';
 import { Component, OnInit } from '@angular/core';
 import { PictogramaService } from 'src/app/service/pictogramas.service';
 import { MatTableDataSource } from '@angular/material/table';
@@ -13,6 +14,8 @@ import { PictogramaDialogoComponent } from '../pictograma-dialogo/pictograma-dia
 export class PictogramasListarComponent implements OnInit {
   dataSource: MatTableDataSource<Pictograma> = new MatTableDataSource();
   displayedColumns:string[]=['idPictograma','namePictograma','id_usuario','accion1','accion2'];
+  listaUsuario: usuario[] = [];
+  idUsuarioSeleccionado: number = 0;
   private idMayor : number = 0 ;
   constructor(private ps:PictogramaService , private dialog:MatDialog) { }
 

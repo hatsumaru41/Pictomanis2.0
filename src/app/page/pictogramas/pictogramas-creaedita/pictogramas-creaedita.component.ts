@@ -1,3 +1,5 @@
+import { UsuarioService } from './../../../service/usuario.service';
+import { usuario } from './../../../model/usuario';
 import { Component, OnInit } from '@angular/core';
 import { Pictograma } from 'src/app/model/pictograma';
 import { PictogramaService } from 'src/app/service/pictogramas.service';
@@ -9,29 +11,34 @@ import { ActivatedRoute , Params , Router } from '@angular/router';
   styleUrls: ['./pictogramas-creaedita.component.css']
 })
 export class PictogramasCreaeditaComponent implements OnInit {
-  Pictograma : Pictograma = new Pictograma() ; 
-  mensaje:string="" ; 
-  edicion:boolean = false ; 
-  id:number = 0 ; 
+  Pictograma : Pictograma = new Pictograma() ;
+  mensaje:string="" ;
+  edicion:boolean = false ;
+  id:number = 0 ;
+  listaUsuario: usuario[] = [];
+  idUsuarioSeleccionado: number = 0;
 
-  constructor(private PictogramaService:PictogramaService , private router:Router , private route:ActivatedRoute) { }
+  constructor(private PictogramaService:PictogramaService , private router:Router , private route:ActivatedRoute, private usuarioService:UsuarioService) { }
 
   ngOnInit(): void {
     this.route.params.subscribe((data:Params)=>{
-      this.id = data['id'] ; 
-      this.edicion = data['id'] != null ; 
-      this.init() ; 
+      this.id = data['id'] ;
+      this.edicion = data['id'] != null ;
+      this.init() ;
 
 
-    })
+    });
+    this.usuarioService.listar().subscribe(data => { this.listaUsuario = data });
   }
+
+
   aceptar(): void {
     if (this.Pictograma.namePictograma.length > 0 && this.Pictograma.namePictograma.length > 0){
          if (this.edicion){
           this.PictogramaService.modificar(this.Pictograma).subscribe(data => {
              this.PictogramaService.listar().subscribe(data => {
                 this.PictogramaService.setLista(data);
-               
+
              })
           })
 
@@ -43,7 +50,7 @@ export class PictogramasCreaeditaComponent implements OnInit {
               })
             })
          }
-        this.router.navigate(['pictogramas']); 
+        this.router.navigate(['pictogramas']);
     } else {
             this.mensaje = "COMPLETE LOS ESPACIOS REQUERIDOS"
 
@@ -52,7 +59,11 @@ export class PictogramasCreaeditaComponent implements OnInit {
 
   init(){
     if (this.edicion) {
-      this.PictogramaService.listarId(this.id).subscribe(data => {this.Pictograma = data ;})
+      this.PictogramaService.listarId(this.id).subscribe(data =>
+        {this.Pictograma = data;
+        console.log(data);
+        this.idUsuarioSeleccionado = data.usuario.idUsuario;
+      })
     }
   }
 }

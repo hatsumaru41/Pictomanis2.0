@@ -1,4 +1,4 @@
-import { Categorias } from './categorias';
+import { Categorias } from "./categoria";
 import { usuario } from "./usuario";
 
 export class Pictograma{
@@ -6,4 +6,5 @@ export class Pictograma{
     namePictograma : string = ""  ;
     idUsuario : usuario = new usuario();
     idCategoria: Categorias = new Categorias();
+  usuario: any;
  }
