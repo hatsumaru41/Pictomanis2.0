@@ -52,6 +52,7 @@ import { IdiomasBuscarComponent } from './page/idiomas/idiomas-buscar/idiomas-bu
 import { CategoriasBuscarComponent } from './page/categorias/categorias-buscar/categorias-buscar.component';
 import { CategoriasDialogoComponent } from './page/categorias/categorias-listar/categorias-dialogo/categorias-dialogo.component';
 import { ResenasBuscarComponent } from './page/resenas/resenas-buscar/resenas-buscar.component';
+import { ResenasDialogoComponent } from './page/resenas/resenas-dialogo/resenas-dialogo.component';
 
 @NgModule({
   declarations: [
@@ -86,7 +87,8 @@ import { ResenasBuscarComponent } from './page/resenas/resenas-buscar/resenas-bu
     rolBuscarComponent,
     CategoriasBuscarComponent,
     CategoriasDialogoComponent,
-    ResenasBuscarComponent
+    ResenasBuscarComponent,
+    ResenasDialogoComponent
 
   ],
   imports: [
