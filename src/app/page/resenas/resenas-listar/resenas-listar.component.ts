@@ -5,8 +5,7 @@ import { Pictograma } from 'src/app/model/pictograma';
 import { ResenasService } from 'src/app/service/resenas.service';
 import {MatTableDataSource} from '@angular/material/table'
 import { Resenas } from 'src/app/model/resenas';
-import { resenasDialogoComponent } from '../resenas-dialogo/resenas-dialogo.component';
-
+import { ResenasDialogoComponent } from '../resenas-dialogo/resenas-dialogo.component';
 @Component({
   selector: 'app-resenas-listar',
   templateUrl: './resenas-listar.component.html',
@@ -30,11 +29,13 @@ constructor(private ps:ResenasService , private dialog:MatDialog, private Pictog
     this.ps.getConfirmaEliminacion().subscribe(data => {
       data == true ? this.eliminar(this.idMayor) : false;
     });
-    this.PictogramaService.listar().subscribe(data => { this.listaPictogramas = data });
+    
+    this.pictogramaService.listar().subscribe(data => { this.listaPictograma = data });
+
   }
   confirmar(id: number) {
     this.idMayor = id;
-    this.dialog.open(resenasDialogoComponent);
+    this.dialog.open(ResenasDialogoComponent);
   }
 
   eliminar(id: number) {
@@ -43,6 +44,6 @@ constructor(private ps:ResenasService , private dialog:MatDialog, private Pictog
         this.ps.setLista(data);
       });
     });
-  }
 
+  }
 }

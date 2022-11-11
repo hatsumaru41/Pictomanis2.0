@@ -30,6 +30,7 @@ import { ResenasComponent } from './page/resenas/resenas.component';
 import { ResenasListarComponent } from './page/resenas/resenas-listar/resenas-listar.component';
 import { ResenasCreaeditaComponent } from './page/resenas/resenas-creaedita/resenas-creaedita.component';
 import { ResenasBuscarComponent } from './page/resenas/resenas-buscar/resenas-buscar.component';
+import { ResenasDialogoComponent } from './page/resenas/resenas-dialogo/resenas-dialogo.component';
 
 import { MembershipComponent } from './page/membership/membership.component';
 import { MembershipListarComponent } from './page/membership/membership-listar/membership-listar.component';
@@ -70,6 +71,7 @@ import { PictogramaDialogoComponent } from './page/pictogramas/pictograma-dialog
     ResenasListarComponent,
     ResenasCreaeditaComponent,
     ResenasBuscarComponent,
+    ResenasDialogoComponent,
     MembershipComponent,
     MembershipListarComponent,
     MembershipCreaeditaComponent,
