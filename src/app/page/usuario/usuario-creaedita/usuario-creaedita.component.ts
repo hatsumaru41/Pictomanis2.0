@@ -25,7 +25,7 @@ export class UsuarioCreaeditaComponent implements OnInit {
 
 
   aceptar(): void {
-    if (this.Usuario.name.length > 0 && this.Usuario.email.length > 0) {
+    if (this.Usuario.nameUsuario.length > 0 && this.Usuario.emailUsuario.length > 0) {
       if (this.edicion) {
         this.UsuarioService.modificar(this.Usuario).subscribe(data => {
           this.UsuarioService.listar().subscribe(data => {

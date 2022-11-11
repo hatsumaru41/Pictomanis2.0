@@ -7,7 +7,7 @@ import { Idiomas } from '../model/idiomas';
   providedIn: 'root'
 })
 export class IdiomasService {
- url:string="http://localhost:5000/idiomas"
+ url:string="http://localhost:8081/idiomas"
 private listaCambio = new Subject<Idiomas[]>()
 private confirmaEliminacion = new Subject<Boolean>()
   constructor(private http:HttpClient) { }
