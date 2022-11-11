@@ -10,13 +10,13 @@ import { MatDialogRef } from '@angular/material/dialog';
 })
 export class IdiomasDialogoComponent implements OnInit {
 
-  constructor(private idiomaservice : IdiomasService,
+  constructor(private idiomaService : IdiomasService,
     private dialogRef: MatDialogRef<IdiomasDialogoComponent>) { }
 
   ngOnInit(): void {
   }
   confirmar(estado: boolean) {
-    this.idiomaservice.setConfirmaEliminacion(estado);
+    this.idiomaService.setConfirmaEliminacion(estado);
     this.dialogRef.close();
   }
 }
