@@ -1,3 +1,4 @@
+import { UsuarioService } from './../../../service/usuario.service';
 import { usuario } from './../../../model/usuario';
 import { Component, OnInit } from '@angular/core';
 import { PictogramaService } from 'src/app/service/pictogramas.service';
@@ -17,7 +18,7 @@ export class PictogramasListarComponent implements OnInit {
   listaUsuario: usuario[] = [];
   idUsuarioSeleccionado: number = 0;
   private idMayor : number = 0 ;
-  constructor(private ps:PictogramaService , private dialog:MatDialog) { }
+  constructor(private ps:PictogramaService , private dialog:MatDialog, private usuarioService: UsuarioService) { }
 
   ngOnInit(): void {
     this.ps.listar().subscribe(data => {
@@ -29,6 +30,7 @@ export class PictogramasListarComponent implements OnInit {
     this.ps.getConfirmaEliminacion().subscribe(data => {
       data == true ? this.eliminar(this.idMayor) : false;
     });
+    this.usuarioService.listar().subscribe(data => { this.listaUsuario = data });
   }
   confirmar(id: number) {
     this.idMayor = id;
