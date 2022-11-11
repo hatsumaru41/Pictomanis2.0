@@ -7,7 +7,7 @@ import { Idiomas } from '../model/idiomas';
   providedIn: 'root'
 })
 export class IdiomasService {
- url:string="http://localhost:5000/idiomas"
+ url:string="http://localhost:8081/idiomas"
 private listaCambio = new Subject<Idiomas[]>()
 private confirmaEliminacion = new Subject<Boolean>()
   constructor(private http:HttpClient) { }
@@ -24,7 +24,7 @@ private confirmaEliminacion = new Subject<Boolean>()
     return this.listaCambio.asObservable();
   }
   modificar(types: Idiomas) {
-  return this.http.put(this.url + '/' + types.id, types);
+  return this.http.put(this.url + '/' + types.idIdiomas, types);
 }
 
   listarId(id: number) {

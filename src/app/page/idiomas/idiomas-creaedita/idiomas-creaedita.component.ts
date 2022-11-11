@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { IdiomasService } from 'src/app/service/idiomas.service';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { Idiomas } from 'src/app/model/idiomas';
+import { Resenas } from 'src/app/model/resenas';
+import { ResenasService } from 'src/app/service/resenas.service';
 
 @Component({
   selector: 'app-idiomas-creaedita',
@@ -13,8 +15,9 @@ export class IdiomasCreaeditaComponent implements OnInit {
   mensaje: string = " Complete los campos asignados";
   edicion: boolean = false;
   id: number = 0;
-
-  constructor(private idiomasService: IdiomasService, private router: Router,private route: ActivatedRoute) { }
+  listaResenas: Resenas[] = [];
+  idResenasSeleccionado: number = 0;
+  constructor(private idiomasService: IdiomasService, private router: Router,private route: ActivatedRoute, private resenasService: ResenasService) { }
 
   ngOnInit(): void {
     this.route.params.subscribe((data: Params) => {
@@ -22,9 +25,14 @@ export class IdiomasCreaeditaComponent implements OnInit {
       this.edicion = data['id'] != null;
       this.init();
     });
+    this.resenasService.listar().subscribe(data => { this.listaResenas = data });
   }
+
   aceptar(): void {
-    if (this.idiomas.idiomas.length > 0) {
+    if (this.idiomas.nameIdiomas.length > 0 && this.idResenasSeleccionado > 0) {
+      let d = new Resenas();
+      d.idResenas = this.idResenasSeleccionado;
+      this.idiomas.resenas = d;
       if (this.edicion) {
         this.idiomasService.modificar(this.idiomas).subscribe(data => {
           this.idiomasService.listar().subscribe(data => {
@@ -48,6 +56,8 @@ export class IdiomasCreaeditaComponent implements OnInit {
     if (this.edicion) {
       this.idiomasService.listarId(this.id).subscribe(data => {
         this.idiomas = data;
+        console.log(data);
+        this.idResenasSeleccionado = data.resenas.idResenas;
       })
     }
 

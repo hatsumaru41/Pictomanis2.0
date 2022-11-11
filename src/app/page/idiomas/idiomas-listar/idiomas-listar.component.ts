@@ -2,7 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MatTableDataSource } from '@angular/material/table';
 import { Idiomas } from 'src/app/model/idiomas';
+import { Resenas } from 'src/app/model/resenas';
 import { IdiomasService } from 'src/app/service/idiomas.service';
+import { ResenasService } from 'src/app/service/resenas.service';
 import { IdiomasDialogoComponent } from './idiomas-dialogo/idiomas-dialogo.component';
 
 @Component({
@@ -12,9 +14,11 @@ import { IdiomasDialogoComponent } from './idiomas-dialogo/idiomas-dialogo.compo
 })
 export class IdiomasListarComponent implements OnInit {
   dataSource: MatTableDataSource<Idiomas> = new MatTableDataSource();
-  displayedColumns:string[]= ['id','idiomas','accion1','accion2']
+  displayedColumns:string[]= ['id','idiomas','resenas','accion1','accion2']
+  listaResenas: Resenas[] = [];
+  idResenasSeleccionado: number = 0;
   private idMayor: number = 0;
-  constructor(private Vs:IdiomasService,private dialog:MatDialog) { }
+  constructor(private Vs:IdiomasService,private dialog:MatDialog, private resenasService:ResenasService) { }
 
   ngOnInit(): void {
     this.Vs.listar().subscribe(d =>{
@@ -26,7 +30,7 @@ export class IdiomasListarComponent implements OnInit {
     this.Vs.getConfirmaEliminacion().subscribe(data => {
       data == true ? this.eliminar(this.idMayor) : false;
     });
-    
+    this.resenasService.listar().subscribe(data => { this.listaResenas = data });
   }
   confirmar(id: number) {
     this.idMayor = id;

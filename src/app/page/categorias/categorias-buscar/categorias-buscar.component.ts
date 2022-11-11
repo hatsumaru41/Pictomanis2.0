@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Categorias } from 'src/app/model/categorias';
-import { CategoriasService } from 'src/app/service/categorias.service';
+import { Categorias } from 'src/app/model/categoria';
+import { CategoriasService } from 'src/app/service/categoria.service';
 
 @Component({
   selector: 'app-categorias-buscar',
@@ -17,7 +17,7 @@ export class CategoriasBuscarComponent implements OnInit {
     let array: Categorias[] = [];
     this.CategoriasService.listar().subscribe(data => {
       data.forEach((element, index) => {
-        if (element.categorias.includes(e.target.value)) {
+        if (element.nameCategoria.includes(e.target.value)) {
           array.push(data[index]);
         }
       });
