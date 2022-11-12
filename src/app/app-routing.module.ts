@@ -56,7 +56,7 @@ const routes: Routes = [
   },
   {
     path: 'pictogramas', component: PictogramasComponent, children: [
-      { path: 'nuevo', component: PictogramasComponent },
+      { path: 'nuevo', component: PictogramasCreaeditaComponent },
       { path: 'edicion/id', component: PictogramasCreaeditaComponent }
     ]
 
