@@ -2,7 +2,6 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
 import { CategoriaService } from './../../../service/categoria.service';
 import { Categoria } from './../../../model/categoria';
 import { Component, OnInit } from '@angular/core';
-
 @Component({
   selector: 'app-categoria-creaedita',
   templateUrl: './categoria-creaedita.component.html',
@@ -48,7 +47,6 @@ export class CategoriaCreaeditaComponent implements OnInit {
     if(this.edicion){
       this.categoriaService.listarId(this.id).subscribe(data=>{
         this.categoria = data;
-        console.log(data);
       })
     }
   }

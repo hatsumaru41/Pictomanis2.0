@@ -4,10 +4,10 @@ import { PictogramaService } from 'src/app/service/pictogramas.service';
 import { MatTableDataSource } from '@angular/material/table';
 import { Pictograma } from 'src/app/model/pictograma';
 import { MatDialog } from '@angular/material/dialog';
-import { PictogramaDialogoComponent } from '../pictograma-dialogo/pictograma-dialogo.component';
 import { CategoriaService } from 'src/app/service/categoria.service';
 import { Categoria } from 'src/app/model/categoria';
 import { usuario } from 'src/app/model/usuario';
+import { PictogramasDialogoComponent } from './pictogramas-dialogo/pictogramas-dialogo.component';
 
 @Component({
   selector: 'app-pictogramas-listar',
@@ -43,7 +43,7 @@ export class PictogramasListarComponent implements OnInit {
   }
   confirmar(id: number) {
     this.idMayor = id;
-    this.dialog.open(PictogramaDialogoComponent);
+    this.dialog.open(PictogramasDialogoComponent);
   }
 
 

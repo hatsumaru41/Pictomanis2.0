@@ -6,7 +6,7 @@ import { Subject, EMPTY } from "rxjs";
     providedIn: 'root'
   })
   export class PictogramaService {
-    url:string = "http://localhost:8081/pictogramas"
+    url:string = "http://localhost:8081/pictograma"
     private listaCambio = new Subject<Pictograma[]>()
     private confirmaEliminacion = new Subject<Boolean>()
   
