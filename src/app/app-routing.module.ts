@@ -19,26 +19,26 @@ import { CategoriaCreaeditaComponent } from './page/categoria/categoria-creaedit
 const routes: Routes = [
   {
     path: 'resenas', component: ResenasComponent, children: [
-      { path: 'nuevo', component: ResenasCreaeditaComponent },
+      { path: 'insertar', component: ResenasCreaeditaComponent },
       { path: 'edicion/:id', component: ResenasCreaeditaComponent}
 
     ]
   },
   {
     path: 'idiomas', component: IdiomasComponent, children: [
-      { path: 'nuevo', component: IdiomasCreaeditaComponent },
+      { path: 'insertar', component: IdiomasCreaeditaComponent },
       { path: 'edicion/:id', component: IdiomasCreaeditaComponent }
     ]
   },
   {
     path: 'categoria', component: CategoriaComponent, children: [
-      { path: 'nuevo', component: CategoriaCreaeditaComponent },
+      { path: 'insertar', component: CategoriaCreaeditaComponent },
       { path: 'edicion/:id', component: CategoriaCreaeditaComponent}
     ]
   },
   {
     path: 'membership', component: MembershipComponent, children: [
-      { path: 'nuevo', component: MembershipCreaeditaComponent },
+      { path: 'insertar', component: MembershipCreaeditaComponent },
       { path: 'edicion/:id', component: MembershipCreaeditaComponent}
     ]
   },
@@ -56,7 +56,7 @@ const routes: Routes = [
   },
   {
     path: 'pictogramas', component: PictogramasComponent, children: [
-      { path: 'nuevo', component: PictogramasCreaeditaComponent },
+      { path: 'insertar', component: PictogramasCreaeditaComponent },
       { path: 'edicion/id', component: PictogramasCreaeditaComponent }
     ]
 
