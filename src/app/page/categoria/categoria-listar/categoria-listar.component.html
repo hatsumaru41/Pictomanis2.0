@@ -1,13 +1,15 @@
-<h1>Lista de Categoria</h1>
-<app-categoria-buscar></app-categoria-buscar>
-<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+<div class="container">
+  <div style="text-align: center;">
+    <h1>Lista de Categoria</h1>
+  </div>
+  <app-categoria-buscar></app-categoria-buscar>
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
     <ng-container matColumnDef="idCategoria">
       <th mat-header-cell *matHeaderCellDef> No. </th>
       <td mat-cell *matCellDef="let element"> {{element.idCategoria}} </td>
     </ng-container>
 
-    
     <ng-container matColumnDef="nameCategoria">
       <th mat-header-cell *matHeaderCellDef> Name </th>
       <td mat-cell *matCellDef="let element"> {{element.nameCategoria}} </td>
@@ -16,8 +18,7 @@
     <ng-container matColumnDef="accion1">
       <th mat-header-cell *matHeaderCellDef></th>
       <td mat-cell *matCellDef="let element"> <button mat-raised-button color="primary"
-          [routerLink]="['edicion', element.idCategoria]">Actualizar</button>
-
+          [routerLink]="['edicion', element?.idCategoria]">Actualizar</button>
       </td>
     </ng-container>
 
@@ -27,13 +28,15 @@
           <button mat-raised-button color="warn" (click)="confirmar(element.idCategoria)">Eliminar</button>
       </td>
     </ng-container>
+
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
 
   <div class="example-button-container">
     <button mat-mini-fab color="primary" aria-label="Example icon button with a plus one icon"
-      routerLink="/categoria/nuevo">
+      routerLink="/categoria/insertar">
       <mat-icon>plus_one</mat-icon>
     </button>
   </div>
+</div>

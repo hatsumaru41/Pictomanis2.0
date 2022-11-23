@@ -30,8 +30,8 @@ export class CategoriaListarComponent implements OnInit {
     this.idMayor = idCategoria;
     this.dialog.open(CategoriaDialogoComponent);
   }
-  eliminar(id: number) {
-    this.Vs.eliminar(id).subscribe(() => {
+  eliminar(idCategoria: number) {
+    this.Vs.eliminar(idCategoria).subscribe(() => {
       this.Vs.listar().subscribe(data => {
         this.Vs.setLista(data);
       });
