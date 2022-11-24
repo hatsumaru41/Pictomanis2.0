@@ -7,7 +7,7 @@ import { Subject, EMPTY } from 'rxjs';
   providedIn: 'root'
 })
 export class CategoriaService {
-  url:string="http://localhost:8081/categorias"
+  url:string="http://localhost:8081/categoria"
   private listaCambio = new Subject<Categoria[]>()
   private confirmaEliminacion = new Subject<Boolean>()
   constructor(private http:HttpClient) { }

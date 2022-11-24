@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./categoria-creaedita.component.css']
 })
 export class CategoriaCreaeditaComponent implements OnInit {
-  categoria: Categoria = new Categoria();
+  Categoria: Categoria = new Categoria();
   mensaje: string = "Complete los campos asignados";
   edicion: boolean = false;
   id: number = 0;
@@ -23,16 +23,16 @@ export class CategoriaCreaeditaComponent implements OnInit {
   }
 
   aceptar(): void {
-    if (this.categoria.nameCategoria.length > 0 ) {
+    if (this.Categoria.nameCategoria.length > 0 ) {
       if (this.edicion) {
-        this.categoriaService.modificar(this.categoria).subscribe(data => {
+        this.categoriaService.modificar(this.Categoria).subscribe(data => {
           this.categoriaService.listar().subscribe(data => {
             this.categoriaService.setLista(data);
           })
         })
       } else {
 
-        this.categoriaService.insertar(this.categoria).subscribe(data => {
+        this.categoriaService.insertar(this.Categoria).subscribe(data => {
           this.categoriaService.listar().subscribe(data => {
             this.categoriaService.setLista(data);
           })
@@ -46,7 +46,7 @@ export class CategoriaCreaeditaComponent implements OnInit {
   init(){
     if(this.edicion){
       this.categoriaService.listarId(this.id).subscribe(data=>{
-        this.categoria = data;
+        this.Categoria = data;
       })
     }
   }
