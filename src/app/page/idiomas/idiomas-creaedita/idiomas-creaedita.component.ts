@@ -32,7 +32,7 @@ export class IdiomasCreaeditaComponent implements OnInit {
     if (this.idiomas.nameIdiomas.length > 0 && this.idResenasSeleccionado > 0) {
       let d = new Resenas();
       d.idResenas = this.idResenasSeleccionado;
-      this.idiomas.resenas = d;
+      this.idiomas.idResenas = d;
       if (this.edicion) {
         this.idiomasService.modificar(this.idiomas).subscribe(data => {
           this.idiomasService.listar().subscribe(data => {
@@ -57,7 +57,7 @@ export class IdiomasCreaeditaComponent implements OnInit {
       this.idiomasService.listarId(this.id).subscribe(data => {
         this.idiomas = data;
         console.log(data);
-        this.idResenasSeleccionado = data.resenas.idResenas;
+        this.idResenasSeleccionado = data.idResenas.idResenas;
       })
     }
 
