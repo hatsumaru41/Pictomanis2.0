@@ -24,7 +24,7 @@ export class MembershipService {
       return this.listaCambio.asObservable();
     }
     modificar(membership: Membership){
-      return this.http.put(this.url + "/"+membership.id, membership);
+      return this.http.put(this.url + "/"+membership.idMembership, membership);
     }
     listarId(id: number){
       return this.http.get<Membership>(`${this.url}/${id}`);

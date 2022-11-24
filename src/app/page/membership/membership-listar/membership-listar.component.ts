@@ -12,7 +12,7 @@ import { MembershipDialogoComponent } from './membership-dialogo/membership-dial
 })
 export class MembershipListarComponent implements OnInit {
   dataSource: MatTableDataSource<Membership> = new MatTableDataSource();
-  displayedColumns:string[]=['id','miembro','type'];
+  displayedColumns:string[]=['id','type','descripcion','accion1','accion2'];
   private idMayor: number = 0;
   constructor(private Vs:MembershipService, private dialog: MatDialog) { }
 
