@@ -20,22 +20,10 @@ export class MembershipCreaeditaComponent implements OnInit {
   constructor(private membershipService: MembershipService, private router: Router,private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-   /* this.route.params.subscribe((data: Params) => {
+   this.route.params.subscribe((data: Params) => {
       this.id = data['id'];
       this.edicion = data['id'] != null;
       this.init();
-    });*/
-    this.membershipService.listar().subscribe(data => {
-      this.lista = data;
-      this.dataSource = new MatTableDataSource(data);
-
-    });
-    this.membershipService.getLista().subscribe(data => {
-      this.dataSource = new MatTableDataSource(data);
-    });
-
-    this.membershipService.getConfirmaEliminacion().subscribe(data => {
-      data == true ? this.eliminar(this.idMayor) : false;
     });
   }
   aceptar(): void {

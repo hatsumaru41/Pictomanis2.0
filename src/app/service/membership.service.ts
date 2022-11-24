@@ -23,8 +23,12 @@ export class MembershipService {
     getLista() {
       return this.listaCambio.asObservable();
     }
-    modificar(membership: Membership){
-      return this.http.put(this.url + "/"+membership.idMembership, membership);
+    /*modificar(membership: Membership){
+      return this.http.put(this.url + "/"+membership.idMembership, membership)
+    }*/
+    modificar(membership: Membership) {
+
+      return this.http.put(this.url, membership);
     }
     listarId(id: number){
       return this.http.get<Membership>(`${this.url}/${id}`);
