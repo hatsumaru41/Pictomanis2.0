@@ -29,21 +29,19 @@ export class PictogramasCreaeditaComponent implements OnInit {
       this.edicion = data['id'] != null ; 
       this.init() ; 
     });
-    this.CategoriaService.listar().subscribe(data =>{
-      this.listaCategoria = data
-    });
-    this.UsuarioService.listar().subscribe(data =>{
-      this.listaUsuario = data
-    });
+    this.CategoriaService.listar().subscribe(data =>{ this.listaCategoria = data });
+    this.UsuarioService.listar().subscribe(data =>{this.listaUsuario = data});
   }
   aceptar(): void {
     if (this.Pictograma.namePictograma.length > 0 && this.idCategoriaSeleccionado > 0 && this.idUsuarioSeleccionado > 0){
       let d = new Categoria();
       let e = new usuario();
+
       d.idCategoria = this.idCategoriaSeleccionado;
+      this.Pictograma.idCategoria = d;
+
       e.idUsuario = this.idUsuarioSeleccionado;
-      this.Pictograma.categoria = d;
-      this.Pictograma.usuario = e;
+      this.Pictograma.idUsuario = e;
          if (this.edicion){
           this.PictogramaService.modificar(this.Pictograma).subscribe(data => {
              this.PictogramaService.listar().subscribe(data => {
@@ -72,8 +70,8 @@ export class PictogramasCreaeditaComponent implements OnInit {
       this.PictogramaService.listarId(this.id).subscribe(data => {
         this.Pictograma = data;
         console.log(data);
-        this.idCategoriaSeleccionado = data.categoria.idCategoria;
-        this.idUsuarioSeleccionado = data.usuario.idUsuario;
+        this.idCategoriaSeleccionado = data.idCategoria.idCategoria;
+        this.idUsuarioSeleccionado = data.idUsuario.idUsuario;
       })
     }
   }

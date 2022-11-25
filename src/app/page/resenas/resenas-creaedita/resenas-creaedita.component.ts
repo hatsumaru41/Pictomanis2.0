@@ -34,6 +34,7 @@ export class ResenasCreaeditaComponent implements OnInit {
       let d = new Pictograma() ; 
       d.idPictograma = this.idPictogramaSeleccionado ;
       this.resenas.pictograma = d ; 
+      
       if (this.edicion) {
         this.resenasService.modificar(this.resenas).subscribe(data => {
           this.resenasService.listar().subscribe(data => {

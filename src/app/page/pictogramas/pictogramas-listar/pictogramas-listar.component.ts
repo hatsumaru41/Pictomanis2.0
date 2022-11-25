@@ -34,12 +34,8 @@ export class PictogramasListarComponent implements OnInit {
     this.ps.getConfirmaEliminacion().subscribe(data => {
       data == true ? this.eliminar(this.idMayor) : false;
     });
-    this.CategoriaService.listar().subscribe(data =>{
-      this.listaCategoria = data
-    });
-    this.UsuarioService.listar().subscribe(data =>{
-      this.listaUsuario = data
-    });
+    this.CategoriaService.listar().subscribe(data => { this.listaCategoria = data });
+    this.UsuarioService.listar().subscribe(data => { this.listaUsuario = data });
   }
   confirmar(id: number) {
     this.idMayor = id;
