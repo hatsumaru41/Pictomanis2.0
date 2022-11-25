@@ -1,4 +1,4 @@
-
+import { Rol } from "./rol";
 
 export class usuario {
   idUsuario: number = 0;
@@ -7,5 +7,5 @@ export class usuario {
   numberUsuario:number = 0;
   emailUsuario:string= "";
   passwordUsuario:string = "";
-  
+  rol: Rol = new Rol();
 }
