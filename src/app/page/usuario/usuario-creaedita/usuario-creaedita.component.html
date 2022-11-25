@@ -37,14 +37,20 @@
   </mat-form-field>
   <br>
   
-  <br>
-
   <mat-form-field class="example-full-width">
     <mat-label>password</mat-label>
     <input matInput required placeholder="password" [(ngModel)]="Usuario.passwordUsuario">
 
   </mat-form-field>
 
+  <mat-form-field appearance="fill">
+    <mat-label>Seleccione Rol</mat-label>
+    <mat-select [(value)]="idRolSeleccionado" required>
+        <mat-option *ngFor="let p of listaRol" [value]="p.idRol">
+            {{p.nameRol}}
+        </mat-option>
+    </mat-select>
+  </mat-form-field>
   <br>
 
   <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>

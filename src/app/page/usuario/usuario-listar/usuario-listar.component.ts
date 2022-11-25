@@ -4,6 +4,8 @@ import { UsuarioService } from 'src/app/service/usuario.service';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatDialog } from '@angular/material/dialog';
 import { UsuarioDialogoComponent } from './usuario-dialogo/usuario-dialogo.component';
+import { Rol } from 'src/app/model/rol';
+import { rolService } from 'src/app/service/rol.service';
 
 @Component({
   selector: 'app-usuario-listar',
@@ -12,9 +14,11 @@ import { UsuarioDialogoComponent } from './usuario-dialogo/usuario-dialogo.compo
 })
 export class UsuarioListarComponent implements OnInit {
   dataSource: MatTableDataSource<usuario> = new MatTableDataSource();
-  displayedColumns: string[] =['id', 'name', 'lastname', 'number', 'email', 'password', 'accion1','accion2'];
+  displayedColumns: string[] =['id', 'name', 'lastname', 'number','rol', 'email', 'password', 'accion1','accion2'];
+  listaRol : Rol[] = [];
+  idRolSeleccionado : number = 0;
   private idMayor: number = 0;
-  constructor(private us: UsuarioService, private dialog: MatDialog) {}
+  constructor(private us: UsuarioService, private dialog: MatDialog, private rolService : rolService) {}
 
   ngOnInit(): void {
     this.us.listar().subscribe(data => {
@@ -26,6 +30,9 @@ export class UsuarioListarComponent implements OnInit {
     this.us.getConfirmaEliminacion().subscribe(data => {
       data == true ? this.eliminar(this.idMayor) : false;
     });
+
+    this.rolService.listar().subscribe(data => { this.listaRol = data });
+
   }
   confirmar(id: number) {
     this.idMayor = id;
