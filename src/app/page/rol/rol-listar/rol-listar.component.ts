@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatDialog } from '@angular/material/dialog';
 import { RolDialogoComponent } from './rol-dialogo/rol-dialogo.component';
-import { rol } from 'src/app/model/rol';
+import { Rol } from 'src/app/model/rol';
 import { rolService } from 'src/app/service/rol.service';
 
 @Component({
@@ -11,7 +11,7 @@ import { rolService } from 'src/app/service/rol.service';
   styleUrls: ['./rol-listar.component.css']
 })
 export class RolListarComponent implements OnInit {
-  dataSource: MatTableDataSource<rol> = new MatTableDataSource();
+  dataSource: MatTableDataSource<Rol> = new MatTableDataSource();
   displayedColumns: string[] =['id', 'rolName','accion1','accion2'];
   private idMayor: number = 0;
   constructor(private rs: rolService, private dialog: MatDialog) {}
