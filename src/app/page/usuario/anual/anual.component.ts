@@ -15,7 +15,7 @@ import { UsuarioDialogoComponent } from '../usuario-listar/usuario-dialogo/usuar
 export class AnualComponent implements OnInit {
 
   dataSource: MatTableDataSource<usuario> = new MatTableDataSource();
-  displayedColumns: string[] =['id', 'name', 'lastname', 'number', 'email', 'password','membership'];
+  displayedColumns: string[] =['id', 'name', 'lastname', 'number', 'email','membership'];
   listaMembership : Membership[] = [];
   idMembershipSeleccionado : number = 0;
   private idMayor: number = 0;
