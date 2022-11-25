@@ -1,3 +1,5 @@
+
+
 export class usuario {
   idUsuario: number = 0;
   nameUsuario: string = "";
@@ -5,4 +7,5 @@ export class usuario {
   numberUsuario:number = 0;
   emailUsuario:string= "";
   passwordUsuario:string = "";
+  
 }
