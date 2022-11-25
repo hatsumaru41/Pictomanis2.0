@@ -45,4 +45,7 @@ export class UsuarioService {
     }
     return EMPTY;
   }
+  Anual(){
+    return this.http.get<usuario[]>(`${this.url}/TipeOfMembership`);
+  }
 }
