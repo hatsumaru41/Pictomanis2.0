@@ -30,7 +30,7 @@ export class IdiomasListarComponent implements OnInit {
     this.Vs.getConfirmaEliminacion().subscribe(data => {
       data == true ? this.eliminar(this.idMayor) : false;
     });
-    this.resenasService.listar().subscribe(data => { this.listaResenas = data });
+    /*this.resenasService.listar().subscribe(data => { this.listaResenas = data });*/
   }
   confirmar(id: number) {
     this.idMayor = id;

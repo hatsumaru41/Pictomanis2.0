@@ -3,20 +3,21 @@
   <h1>Agrege la categoria</h1>
 
   <mat-form-field class="example-full-width">
-    <mat-label>Id</mat-label>
-    <input matInput placeholder="idCategoria" [(ngModel)]="categoria.idCategoria">
+    <mat-label>id</mat-label>
+    <input matInput placeholder="idCategoria" [(ngModel)]="Categoria.idCategoria">
   </mat-form-field>
 
   <br>
 
   <mat-form-field class="example-full-width">
     <mat-label>Categoria</mat-label>
-    <input matInput required placeholder="nameCategoria" [(ngModel)]="categoria.nameCategoria">
+    <input matInput required placeholder="nameCategoria" [(ngModel)]="Categoria.nameCategoria">
 
   </mat-form-field>
   <br>
   <br>
   <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
   <button mat-raised-button color="warn" routerLink="/categoria">Cancelar</button>
+  <p>{{mensaje}}</p>
 
 </div>

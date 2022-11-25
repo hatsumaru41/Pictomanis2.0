@@ -1,5 +1,5 @@
 export class Membership{
-    id:number=0;
-    miembro:string = "";
+  idMembership:number=0;
+    nameMembership:string = "";
     type:string= "";
   }

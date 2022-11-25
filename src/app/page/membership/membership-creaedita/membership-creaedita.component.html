@@ -4,22 +4,22 @@
   
     <mat-form-field class="example-full-width">
       <mat-label>Id</mat-label>
-      <input matInput placeholder="Id" [(ngModel)]="membership.id">
+      <input matInput placeholder="Id" [(ngModel)]="membership.idMembership">
     </mat-form-field>
   
     <br>
-  
     <mat-form-field class="example-full-width">
-      <mat-label>Miembro</mat-label>
-      <input matInput required placeholder="name" [(ngModel)]="membership.miembro">
+      <mat-label>Tipo de Membresia</mat-label>
+      <input matInput required placeholder="name" [(ngModel)]="membership.type">
+  
+  </mat-form-field>
+  <br>
+    <mat-form-field class="example-full-width">
+      <mat-label>Descripcion</mat-label>
+      <input matInput required placeholder="name" [(ngModel)]="membership.nameMembership">
   
     </mat-form-field>
     <br>
-    <mat-form-field class="example-full-width">
-        <mat-label>Tipo de Membresia</mat-label>
-        <input matInput required placeholder="name" [(ngModel)]="membership.type">
-    
-    </mat-form-field>
       <br>
     <br>
 
