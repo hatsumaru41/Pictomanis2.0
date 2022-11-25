@@ -46,4 +46,7 @@ private confirmaEliminacion = new Subject<Boolean>()
     }
     return EMPTY;
   }
+  comentario(){
+    return this.http.get<Idiomas[]>(`${this.url}/TypeOfResena`);
+  }
 }
