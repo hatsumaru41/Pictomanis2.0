@@ -19,6 +19,7 @@ export class UsuarioCreaeditaComponent implements OnInit {
   listaRol : Rol[] = [];
   idRolSeleccionado : number = 0;
   listaMembership : Membership[] = [];
+  lista: usuario[] = [];
   idMembershipSeleccionado : number = 0;
   constructor(private UsuarioService: UsuarioService, private router: Router, private route: ActivatedRoute, private rolService : rolService, private MembershipService : MembershipService) { }
 
@@ -62,15 +63,21 @@ export class UsuarioCreaeditaComponent implements OnInit {
       this.mensaje = "Complete los valores requeridos";
     }
   }
-
+  eliminar(id: number){
+    this.UsuarioService.eliminar(id).subscribe(()=>{
+      this.UsuarioService.listar().subscribe(data =>{
+        this.UsuarioService.setLista(data);
+      });
+    })
+  }
 
   init() {
     if (this.edicion) {
       this.UsuarioService.listarId(this.id).subscribe(data => {
         this.Usuario = data;
-        console.log(data) ; 
-        this.idRolSeleccionado = data.rol.idRol ;
-        this.idMembershipSeleccionado = data.membership.idMembership ;
+        console.log(data); 
+        this.idRolSeleccionado = data.rol.idRol;
+        this.idMembershipSeleccionado = data.membership.idMembership;
       })
     }
 

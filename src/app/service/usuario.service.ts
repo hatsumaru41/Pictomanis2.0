@@ -48,4 +48,7 @@ export class UsuarioService {
   Anual(){
     return this.http.get<usuario[]>(`${this.url}/TipeOfMembership`);
   }
+  Admin(){
+    return this.http.get<usuario[]>(`${this.url}/TypeOfRol`);
+  }
 }

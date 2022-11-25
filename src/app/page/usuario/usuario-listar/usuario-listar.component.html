@@ -5,52 +5,42 @@
   <app-usuario-buscar></app-usuario-buscar>
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
-  <!--- Note that these columns can be defined in any order.
-        The actual rendered columns are set as a property on the row definition" -->
 
-  <!-- Position Column -->
   <ng-container matColumnDef="id">
     <th mat-header-cell *matHeaderCellDef> ID </th>
     <td mat-cell *matCellDef="let element"> {{element.idUsuario}} </td>
   </ng-container>
 
-  <!-- Name Column -->
   <ng-container matColumnDef="name">
     <th mat-header-cell *matHeaderCellDef> NAME</th>
     <td mat-cell *matCellDef="let element"> {{element.nameUsuario}} </td>
   </ng-container>
 
-  <!-- Weight Column -->
   <ng-container matColumnDef="lastname">
     <th mat-header-cell *matHeaderCellDef> LASTNAME </th>
     <td mat-cell *matCellDef="let element"> {{element.lastName}} </td>
   </ng-container>
 
-  <!-- Symbol Column -->
   <ng-container matColumnDef="number">
     <th mat-header-cell *matHeaderCellDef> TELEPHONE_NUMBER </th>
     <td mat-cell *matCellDef="let element"> {{element.numberUsuario}} </td>
   </ng-container>
 
-  <!-- Symbol Column -->
   <ng-container matColumnDef="email">
     <th mat-header-cell *matHeaderCellDef> EMAIL </th>
     <td mat-cell *matCellDef="let element"> {{element.emailUsuario}} </td>
   </ng-container>
   
-  <!-- Symbol Column -->
   <ng-container matColumnDef="password">
     <th mat-header-cell *matHeaderCellDef> PASSWORD </th>
     <td mat-cell *matCellDef="let element"> *********** </td>
   </ng-container>
 
-   <!-- Symbol Column -->
    <ng-container matColumnDef="rol">
     <th mat-header-cell *matHeaderCellDef> Rol</th>
     <td mat-cell *matCellDef="let element"> {{element.rol.nameRol}}</td>
   </ng-container>
 
-  <!-- Symbol Column -->
   <ng-container matColumnDef="membership">
     <th mat-header-cell *matHeaderCellDef> Nombre de membresia</th>
     <td mat-cell *matCellDef="let element"> {{element.membership.nameMembership}}</td>
@@ -79,15 +69,13 @@
       routerLink="/usuario/insertar">
       <mat-icon>plus_one</mat-icon>
   </button>
-  
-  <button
-        style="margin: 5px"
-        routerLink="/usuario/Anual"
-        mat-raised-button
-        color="accent"
-      >
-        Membresia Anual
-      </button>
+  <br>
+  <br>
+  <button style="margin: 5px" routerLink="/usuario/Anual" mat-raised-button color="accent"> Membresia Anual </button>
 
 </div>
+
+<div class="example-button-container">
+  <button style="margin: 5px" routerLink="/usuario/Admin" mat-raised-button color="accent"> Administradores  </button>
+  </div>
 </div>

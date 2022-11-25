@@ -1,3 +1,4 @@
+import { AdministradorComponent } from './page/usuario/administrador/administrador.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { IdiomasCreaeditaComponent } from './page/idiomas/idiomas-creaedita/idiomas-creaedita.component';
@@ -55,7 +56,8 @@ const routes: Routes = [
     path: 'usuario', component: UsuarioComponent, children: [
       { path: 'insertar', component: UsuarioCreaeditaComponent },
       { path: 'edicion/:id', component: UsuarioCreaeditaComponent },
-      { path: 'Anual', component: AnualComponent }
+      { path: 'Anual', component: AnualComponent },
+      { path: 'Admin', component: AdministradorComponent}
     ]
   },
   {

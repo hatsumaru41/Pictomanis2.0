@@ -56,6 +56,7 @@ import { PictogramasBuscarComponent } from './page/pictogramas/pictogramas-busca
 import { PictogramasDialogoComponent } from './page/pictogramas/pictogramas-listar/pictogramas-dialogo/pictogramas-dialogo.component';
 import { AnualComponent } from './page/usuario/anual/anual.component';
 import { ComentarioComponent } from './page/idiomas/comentario/comentario.component';
+import { AdministradorComponent } from './page/usuario/administrador/administrador.component';
 
 @NgModule({
   declarations: [
@@ -95,6 +96,7 @@ import { ComentarioComponent } from './page/idiomas/comentario/comentario.compon
     PictogramasDialogoComponent,
     AnualComponent,
     ComentarioComponent,
+    AdministradorComponent
   ],
   imports: [
     BrowserModule,

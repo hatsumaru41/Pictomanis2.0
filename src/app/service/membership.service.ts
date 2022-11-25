@@ -23,9 +23,6 @@ export class MembershipService {
     getLista() {
       return this.listaCambio.asObservable();
     }
-    /*modificar(membership: Membership){
-      return this.http.put(this.url + "/"+membership.idMembership, membership)
-    }*/
     modificar(membership: Membership) {
 
       return this.http.put(this.url, membership);
