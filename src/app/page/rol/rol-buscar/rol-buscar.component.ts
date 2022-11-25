@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { rol } from 'src/app/model/rol';
+import { Rol } from 'src/app/model/rol';
 import { rolService} from 'src/app/service/rol.service';
 
 @Component({
@@ -14,7 +14,7 @@ export class rolBuscarComponent implements OnInit {
   ngOnInit(): void {
   }
   buscar(e: any) {
-    let array: rol[] = [];
+    let array: Rol[] = [];
     this.RolService.listar().subscribe(data => {
       data.forEach((element, index) => {
         if (element.nameRol.includes(e.target.value)) {
