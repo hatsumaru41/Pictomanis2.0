@@ -57,7 +57,7 @@ const routes: Routes = [
   {
     path: 'pictogramas', component: PictogramasComponent, children: [
       { path: 'insertar', component: PictogramasCreaeditaComponent },
-      { path: 'edicion/id', component: PictogramasCreaeditaComponent }
+      { path: 'edicion/:id', component: PictogramasCreaeditaComponent }
     ]
 
   },

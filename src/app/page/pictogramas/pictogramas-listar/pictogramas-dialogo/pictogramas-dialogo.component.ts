@@ -9,7 +9,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PictogramasDialogoComponent implements OnInit {
 
-  constructor(private PictogramaService: PictogramaService, private dialogRef: MatDialogRef<PictogramasDialogoComponent>) { }
+  constructor(private PictogramaService: PictogramaService, 
+    private dialogRef: MatDialogRef<PictogramasDialogoComponent>) { }
 
   ngOnInit(): void {
   }

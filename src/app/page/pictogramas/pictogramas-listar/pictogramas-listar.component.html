@@ -23,7 +23,7 @@
 
       <ng-container matColumnDef="categoria">
         <th mat-header-cell *matHeaderCellDef> Categoria </th>
-        <td mat-cell *matCellDef="let element"> {{element.categoria.nameCategoria} </td>
+        <td mat-cell *matCellDef="let element"> {{element.categoria.nameCategoria}}</td>
       </ng-container>
 
       <ng-container matColumnDef="accion1">
@@ -33,6 +33,7 @@
     
         </td>
       </ng-container>
+      
       <ng-container matColumnDef="accion2">
         <th mat-header-cell *matHeaderCellDef></th>
         <td mat-cell *matCellDef="let element">
@@ -47,7 +48,7 @@
     
     <div class="example-full-container">
       <button mat-mini-fab color="primary" aria-label="Example icon button with a plus one icon"
-          routerLink="/pictogramas/nuevo">
+          routerLink="/pictogramas/insertar">
           <mat-icon>plus_one</mat-icon>
         </button>
       </div>

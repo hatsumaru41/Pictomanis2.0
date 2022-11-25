@@ -9,7 +9,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CategoriaDialogoComponent implements OnInit {
 
-  constructor(private CategoriaService: CategoriaService, private dialogRef: MatDialogRef<CategoriaDialogoComponent>) { }
+  constructor(private CategoriaService: CategoriaService, 
+    private dialogRef: MatDialogRef<CategoriaDialogoComponent>) { }
 
   ngOnInit(): void {
   }
