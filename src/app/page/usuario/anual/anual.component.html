@@ -44,50 +44,14 @@
     <td mat-cell *matCellDef="let element"> *********** </td>
   </ng-container>
 
-   <!-- Symbol Column -->
-   <ng-container matColumnDef="rol">
-    <th mat-header-cell *matHeaderCellDef> Rol</th>
-    <td mat-cell *matCellDef="let element"> {{element.rol.nameRol}}</td>
-  </ng-container>
-
   <!-- Symbol Column -->
   <ng-container matColumnDef="membership">
     <th mat-header-cell *matHeaderCellDef> Nombre de membresia</th>
     <td mat-cell *matCellDef="let element"> {{element.membership.nameMembership}}</td>
   </ng-container>
 
-  <ng-container matColumnDef="accion1">
-    <th mat-header-cell *matHeaderCellDef>  </th>
-    <td mat-cell *matCellDef="let element"> <button mat-raised-button color="primary"
-        [routerLink]="['edicion', element?.idUsuario]">Actualizar</button>
-    </td>
-  </ng-container>
-
-  <ng-container matColumnDef="accion2">
-    <th mat-header-cell *matHeaderCellDef> </th>
-    <td mat-cell *matCellDef="let element">
-        <button mat-raised-button color="warn" (click)="confirmar(element.idUsuario)">Eliminar</button>
-    </td>
-  </ng-container>
-
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
   <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 </table>
 
-<div class="example-button-container">
-  <button mat-mini-fab color="primary" aria-label="Example icon button with a plus one icon"
-      routerLink="/usuario/insertar">
-      <mat-icon>plus_one</mat-icon>
-  </button>
-  
-  <button
-        style="margin: 5px"
-        routerLink="/usuario/Anual"
-        mat-raised-button
-        color="accent"
-      >
-        Membresia Anual
-      </button>
-
-</div>
 </div>

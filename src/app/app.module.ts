@@ -54,6 +54,7 @@ import { PictogramasCreaeditaComponent } from './page/pictogramas/pictogramas-cr
 import { PictogramasListarComponent } from './page/pictogramas/pictogramas-listar/pictogramas-listar.component';
 import { PictogramasBuscarComponent } from './page/pictogramas/pictogramas-buscar/pictogramas-buscar.component';
 import { PictogramasDialogoComponent } from './page/pictogramas/pictogramas-listar/pictogramas-dialogo/pictogramas-dialogo.component';
+import { AnualComponent } from './page/usuario/anual/anual.component';
 
 @NgModule({
   declarations: [
@@ -91,6 +92,7 @@ import { PictogramasDialogoComponent } from './page/pictogramas/pictogramas-list
     UsuarioBuscarComponent,
     rolBuscarComponent,
     PictogramasDialogoComponent,
+    AnualComponent,
   ],
   imports: [
     BrowserModule,
