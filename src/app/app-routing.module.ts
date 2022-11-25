@@ -15,6 +15,8 @@ import { PictogramasCreaeditaComponent } from './page/pictogramas/pictogramas-cr
 import { PictogramasComponent } from './page/pictogramas/pictogramas.component';
 import { CategoriaComponent } from './page/categoria/categoria.component';
 import { CategoriaCreaeditaComponent } from './page/categoria/categoria-creaedita/categoria-creaedita.component';
+import { AnualComponent } from './page/usuario/anual/anual.component';
+import { ComentarioComponent } from './page/idiomas/comentario/comentario.component';
 
 const routes: Routes = [
   {
@@ -27,7 +29,8 @@ const routes: Routes = [
   {
     path: 'idiomas', component: IdiomasComponent, children: [
       { path: 'insertar', component: IdiomasCreaeditaComponent },
-      { path: 'edicion/:id', component: IdiomasCreaeditaComponent }
+      { path: 'edicion/:id', component: IdiomasCreaeditaComponent },
+      { path: 'Comentario', component: ComentarioComponent }
     ]
   },
   {
@@ -51,7 +54,8 @@ const routes: Routes = [
   {
     path: 'usuario', component: UsuarioComponent, children: [
       { path: 'insertar', component: UsuarioCreaeditaComponent },
-      { path: 'edicion/:id', component: UsuarioCreaeditaComponent }
+      { path: 'edicion/:id', component: UsuarioCreaeditaComponent },
+      { path: 'Anual', component: AnualComponent }
     ]
   },
   {

@@ -5,32 +5,24 @@ import { Idiomas } from 'src/app/model/idiomas';
 import { Resenas } from 'src/app/model/resenas';
 import { IdiomasService } from 'src/app/service/idiomas.service';
 import { ResenasService } from 'src/app/service/resenas.service';
-import { IdiomasDialogoComponent } from './idiomas-dialogo/idiomas-dialogo.component';
+import { IdiomasDialogoComponent } from '../idiomas-listar/idiomas-dialogo/idiomas-dialogo.component';
 
 @Component({
-  selector: 'app-idiomas-listar',
-  templateUrl: './idiomas-listar.component.html',
-  styleUrls: ['./idiomas-listar.component.css']
+  selector: 'app-comentario',
+  templateUrl: './comentario.component.html',
+  styleUrls: ['./comentario.component.css']
 })
-export class IdiomasListarComponent implements OnInit {
+export class ComentarioComponent implements OnInit {
+
   dataSource: MatTableDataSource<Idiomas> = new MatTableDataSource();
-  displayedColumns:string[]= ['id','idiomas','resenas','accion1','accion2']
+  displayedColumns:string[]= ['id','idiomas','resenas']
   listaResenas: Resenas[] = [];
   idResenasSeleccionado: number = 0;
   private idMayor: number = 0;
   constructor(private Vs:IdiomasService,private dialog:MatDialog, private resenasService:ResenasService) { }
 
   ngOnInit(): void {
-    this.Vs.listar().subscribe(d =>{
-      this.dataSource = new MatTableDataSource(d);
-    });
-    this.Vs.getLista().subscribe(data => {
-      this.dataSource = new MatTableDataSource(data);
-    });
-    this.Vs.getConfirmaEliminacion().subscribe(data => {
-      data == true ? this.eliminar(this.idMayor) : false;
-    });
-    this.resenasService.listar().subscribe(data => { this.listaResenas = data });
+    this.Vs.comentario().subscribe((data)=>{this.dataSource= new MatTableDataSource<Idiomas>(data)})
   }
   confirmar(id: number) {
     this.idMayor = id;

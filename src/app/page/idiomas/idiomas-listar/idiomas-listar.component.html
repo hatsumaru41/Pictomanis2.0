@@ -1,11 +1,7 @@
-<h1>Lista de Idiomas</h1>
+<h1>Lista de Comentarios en Idiomas</h1>
 <app-idiomas-buscar></app-idiomas-buscar>
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
-    <!--- Note that these columns can be defined in any order.
-          The actual rendered columns are set as a property on the row definition" -->
-  
-    <!-- Position Column -->
     <ng-container matColumnDef="id">
       <th mat-header-cell *matHeaderCellDef> No. </th>
       <td mat-cell *matCellDef="let element"> {{element.idIdiomas}} </td>
@@ -20,7 +16,7 @@
     <!-- Name Column -->
     <ng-container matColumnDef="resenas">
       <th mat-header-cell *matHeaderCellDef> Resena </th>
-      <td mat-cell *matCellDef="let element"> {{element.resenas.nameResenas}} </td>
+      <td mat-cell *matCellDef="let element"> {{element.idResenas.nameResenas}} </td>
     </ng-container>
   
     <ng-container matColumnDef="accion1">
@@ -45,7 +41,16 @@
   <div class="example-button-container">
 
     <button mat-mini-fab color="primary" aria-label="Example icon button with a plus one icon"
-      routerLink="/idiomas/nuevo">
+      routerLink="/idiomas/insertar">
       <mat-icon>plus_one</mat-icon>
     </button>
-  </div>
+    <button
+    style="margin: 5px"
+    routerLink="/idiomas/Comentario"
+    mat-raised-button
+    color="accent"
+  >
+    Resena Tipo Comentario
+  </button>
+
+</div>

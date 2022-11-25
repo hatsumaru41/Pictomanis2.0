@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
-import { rol } from 'src/app/model/rol';
+import { Rol } from 'src/app/model/rol';
 import { rolService } from 'src/app/service/rol.service';
 @Component({
   selector: 'app-rol-creaedita',
@@ -8,7 +8,7 @@ import { rolService } from 'src/app/service/rol.service';
   styleUrls: ['./rol-creaedita.component.css']
 })
 export class RolCreaeditaComponent implements OnInit {
-  rol: rol = new rol();
+  rol: Rol = new Rol();
   mensaje: string = " ";
   edicion: boolean = false;
   id: number = 0;
@@ -26,7 +26,7 @@ export class RolCreaeditaComponent implements OnInit {
 
 
   aceptar(): void {
-    if (this.rol.rolName.length > 0) {
+    if (this.rol.nameRol.length > 0) {
       if (this.edicion) {
         this.RolService.modificar(this.rol).subscribe(data => {
           this.RolService.listar().subscribe(data => {
