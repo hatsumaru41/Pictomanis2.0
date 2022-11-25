@@ -1,3 +1,4 @@
+import { Membership } from "./membership";
 import { Rol } from "./rol";
 
 export class usuario {
@@ -8,4 +9,5 @@ export class usuario {
   emailUsuario:string= "";
   passwordUsuario:string = "";
   rol: Rol = new Rol();
+  membership: Membership = new Membership();
 }

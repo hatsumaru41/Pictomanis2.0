@@ -53,6 +53,16 @@
   </mat-form-field>
   <br>
 
+  <mat-form-field appearance="fill">
+    <mat-label>Seleccione Membership</mat-label>
+    <mat-select [(value)]="idMembershipSeleccionado" required>
+        <mat-option *ngFor="let p of listaMembership" [value]="p.idMembership">
+            {{p.nameMembership}}
+        </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <br>
+
   <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
   <button mat-raised-button color="warn" routerLink="/usuario">Cancelar</button>
   <p>{{mensaje}}</p>

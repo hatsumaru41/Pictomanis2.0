@@ -11,7 +11,7 @@
   
     <!-- Name Column -->
     <ng-container matColumnDef="nameResenas">
-      <th mat-header-cell *matHeaderCellDef> Name </th>
+      <th mat-header-cell *matHeaderCellDef> Resena </th>
       <td mat-cell *matCellDef="let element"> {{element.nameResenas}} </td>
     </ng-container>
 
@@ -23,7 +23,7 @@
   
     <ng-container matColumnDef="Pictogramas">
       <th mat-header-cell *matHeaderCellDef> Pictogramas </th>
-      <td mat-cell *matCellDef="let element"> {{element.pictogramas.namePictogramas}} </td>
+      <td mat-cell *matCellDef="let element"> {{element.pictograma.namePictograma}} </td>
     </ng-container>
 
     <ng-container matColumnDef="accion1">
@@ -48,7 +48,7 @@
   <div class="example-button-container">
 
     <button mat-mini-fab color="primary" aria-label="Example icon button with a plus one icon"
-      routerLink="/Resena/nuevo">
+      routerLink="/resenas/insertar">
       <mat-icon>plus_one</mat-icon>
     </button>
   </div>

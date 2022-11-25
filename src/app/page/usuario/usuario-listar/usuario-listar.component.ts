@@ -6,6 +6,8 @@ import { MatDialog } from '@angular/material/dialog';
 import { UsuarioDialogoComponent } from './usuario-dialogo/usuario-dialogo.component';
 import { Rol } from 'src/app/model/rol';
 import { rolService } from 'src/app/service/rol.service';
+import { Membership } from 'src/app/model/membership';
+import { MembershipService } from 'src/app/service/membership.service';
 
 @Component({
   selector: 'app-usuario-listar',
@@ -14,11 +16,13 @@ import { rolService } from 'src/app/service/rol.service';
 })
 export class UsuarioListarComponent implements OnInit {
   dataSource: MatTableDataSource<usuario> = new MatTableDataSource();
-  displayedColumns: string[] =['id', 'name', 'lastname', 'number','rol', 'email', 'password', 'accion1','accion2'];
+  displayedColumns: string[] =['id', 'name', 'lastname', 'number', 'email', 'password','rol','membership', 'accion1','accion2'];
   listaRol : Rol[] = [];
   idRolSeleccionado : number = 0;
+  listaMembership : Membership[] = [];
+  idMembershipSeleccionado : number = 0;
   private idMayor: number = 0;
-  constructor(private us: UsuarioService, private dialog: MatDialog, private rolService : rolService) {}
+  constructor(private us: UsuarioService, private dialog: MatDialog, private rolService : rolService, private MembershipService : MembershipService) {}
 
   ngOnInit(): void {
     this.us.listar().subscribe(data => {
@@ -32,7 +36,7 @@ export class UsuarioListarComponent implements OnInit {
     });
 
     this.rolService.listar().subscribe(data => { this.listaRol = data });
-
+    this.MembershipService.listar().subscribe(data => { this.listaMembership = data });
   }
   confirmar(id: number) {
     this.idMayor = id;

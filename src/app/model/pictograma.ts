@@ -4,6 +4,6 @@ import { usuario } from "./usuario";
 export class Pictograma{
     idPictograma : number = 0 ; 
     namePictograma : string = ""  ; 
-    usuario : usuario = new usuario();
-    categoria: Categoria = new Categoria();
+    idUsuario : usuario = new usuario();
+    idCategoria: Categoria = new Categoria();
  }
