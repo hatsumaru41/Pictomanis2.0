@@ -24,7 +24,7 @@ export class rolService {
     return this.listaCambio.asObservable();
   }
   modificar(Rol: rol){
-    return this.http.put(this.url + "/" + Rol.id, Rol);
+    return this.http.put(this.url + "/" + Rol.idRol, Rol);
   }
   listarId(id: number) {
     return this.http.get<rol>(`${this.url}/${id}`);

@@ -1,4 +1,4 @@
 export class rol{
-  id:number = 0;
-  rolName:string = "";
+  idRol:number = 0;
+  nameRol:string = "";
   }

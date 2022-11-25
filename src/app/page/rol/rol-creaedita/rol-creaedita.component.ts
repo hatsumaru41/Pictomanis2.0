@@ -26,7 +26,7 @@ export class RolCreaeditaComponent implements OnInit {
 
 
   aceptar(): void {
-    if (this.rol.rolName.length > 0) {
+    if (this.rol.nameRol.length > 0) {
       if (this.edicion) {
         this.RolService.modificar(this.rol).subscribe(data => {
           this.RolService.listar().subscribe(data => {
